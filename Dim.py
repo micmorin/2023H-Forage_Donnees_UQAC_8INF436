@@ -1,0 +1,2 @@
+def preparationDeDimension(donnees):
+  return "", "", ""
