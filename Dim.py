@@ -1,2 +1,2 @@
 def preparationDeDimension(donnees):
-  return "", "", ""
+  return donnees
