@@ -1,7 +1,7 @@
 from Prep import preparationDesDonnees
 from Dim import preparationDeDimension
 from Class import classificationEnTroisModele
-from web import interfaceUtilisateur
+from Web import interfaceUtilisateur
 
 if __name__ == "__main__":
   donnees =  preparationDesDonnees()
