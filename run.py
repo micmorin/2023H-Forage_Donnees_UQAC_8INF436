@@ -1,5 +1,5 @@
 from Classification.models import classificationEnTroisModele
-from Dimension.dimensions import preparationDeDimension
+from Dimensions.dimensions import preparationDeDimension
 from Interface.UI import interfaceUtilisateur
 from Preparation.donnees import preparationDesDonnees
 
