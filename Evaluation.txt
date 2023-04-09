@@ -1,0 +1,24 @@
+########################
+# Evaluation des pairs #
+########################
+
+Nom de l'evaluateur:    
+Date de l'evaluation:   
+
+########################
+# Grille D'evaluation
+# 1 = Communication et participation difficile/impossible
+# 2 = Communication et participation sporadique
+# 3 = Communication et participation OK
+# 4 = Communication et participation satisfaisante
+# 5 = Communication et participation excellente
+########################
+
+--- Evaluation ---
+                Communication   participation   Moyenne
+David LELIEVRE      0               0               0     
+Jules DELAMARE      0               0               0   
+Amani SATOURI       0               0               0   
+Michael MORIN       0               0               0  
+
+--- Fin ---
