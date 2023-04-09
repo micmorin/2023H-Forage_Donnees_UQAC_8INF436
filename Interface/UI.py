@@ -17,8 +17,8 @@ def interfaceUtilisateur(modele1, modele2, modele3, donees):
 
     # Metrics.html
     @app.route("/metrics", methods=['GET'])        
-    def metrics(index):
-        return render_template('index.html')
+    def metrics():
+        return render_template('metrics.html')
 
     # Begin Flask Server
     app.run(host='127.0.0.1',port=80)
