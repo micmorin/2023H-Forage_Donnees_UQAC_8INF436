@@ -1,6 +1,4 @@
-### Projet de groupe
-### 8INF436 - Forage des Données 
-### UQAC – Hiver 2023
+# Projet de groupe - 8INF436 - Forage des Données - UQAC – Hiver 2023
 
 # Membres de l'équipe
 - David LELIEVRE 
