@@ -3,6 +3,7 @@
 {% block title %}Projet de Groupe{% endblock %}
 
 {% block content %}
+
 <body>  
     <main>
         <div class="row justify-content-center">
@@ -53,39 +54,6 @@
         
 {% block script %}
 <script>
-    let selected = []
-
-    window.onload = (event) => {
-        if("{{alert}}" != ""){
-            alert("{{alert}}");
-            };
-        }
-        
-    function select() {
-        if(selected.length == 1){
-        document.getElementById(selected[0]).style.border = "3px solid Aqua";
-        }
-        if(selected.length == 2){
-            document.getElementById(selected.shift()).style.border = "3px solid Black";
-            document.getElementById(selected[0]).style.border = "3px solid Aqua";
-        }
-        selected.push(event.target.id)
-        document.getElementById(event.target.id).style.border = "3px solid Magenta";
-    }
-
-    function submit() {
-        if(selected.length == 2){
-            document.getElementById("selected_hidden").value = selected[0]+selected[1];
-            document.getElementById("board").submit();
-        }
-        else{
-            alert("You need to select two spaces to swap")
-        }
-    }
-
-    function submit_AI() {
-        document.getElementById("selected_hidden").value = ['0000'];
-        document.getElementById("board").submit();
-    }
+    
 </script> 
 {% endblock %}
