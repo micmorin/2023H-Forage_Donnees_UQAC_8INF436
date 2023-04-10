@@ -7,7 +7,6 @@ from sklearn.preprocessing import OneHotEncoder
 from sklearn.preprocessing import StandardScaler
 from sklearn.preprocessing import LabelEncoder
 import matplotlib.pyplot as plt
-%matplotlib inline
 
 def preparationDesDonnees():
   customer = pd.read_csv("Customer.csv")
