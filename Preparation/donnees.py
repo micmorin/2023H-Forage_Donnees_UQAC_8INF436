@@ -193,4 +193,4 @@ def preparationDesDonnees():
 # On supprime les colonnes orignales
   df =df.drop(['gender', 'country', 'ReBuy'], axis = 1)
   df.head()
-  return dataset_cleaned
+  return df
