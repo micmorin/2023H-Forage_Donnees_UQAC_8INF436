@@ -79,14 +79,14 @@
             <table class="table table-striped table-hover text-center" id="myTable">
                 <thead>
                     <tr>
-                        <th scope="col">Age</th>
-                        <th scope="col">Pages</th>
-                        <th scope="col">Prix du premier item</th>
-                        <th scope="col">Genre</th>
-                        <th scope="col">Achats > 1</th>
-                        <th scope="col">Publicités Accèdés</th>
-                        <th scope="col">Pays</th>
-                        <th scope="col">Revenue</th>
+                        <th scope="col" style="width:5%">Age</th>
+                        <th scope="col" style="width:10%">Pages</th>
+                        <th scope="col" style="width:15%">Prix du premier item</th>
+                        <th scope="col" style="width:18%">Genre</th>
+                        <th scope="col" style="width:17%">Achats > 1</th>
+                        <th scope="col" style="width:15%">Publicités Accèdés</th>
+                        <th scope="col" style="width:10%">Pays</th>
+                        <th scope="col"style="width:10%" >Revenue</th>
                       </tr>
                 </thead>
                 <tbody id="myTableBody">
@@ -94,17 +94,17 @@
                         <td><input class="form-control" type="number" min="0" required></td>
                         <td><input class="form-control" type="number" min="0" required></td>
                         <td><input class="form-control" type="number" min="0" required></td>
-                        <td><input class="form-control" type="text" required></td>
-                        <td><input class="form-control" type="number" min="0"></td>
                         <td>
-                            <input class="form-check-input" type="radio"  name="genre1" value="Masc" required> Masc </br>
+                            <input class="form-check-input" type="radio"  name="genre1" value="Masc" required> Masc
                             <input class="form-check-input" type="radio"  name="genre1" value="Fem" required>  Fem
                         </td>
                         <td>
                             <input class="form-check-input" type="radio"  name="achats1" value="Oui" required> Oui
                             <input class="form-check-input" type="radio"  name="achats1" value="Non" required> Non
                         </td>
-                        <td><input class="form-control" type="number" min="0"></td>
+                        <td><input class="form-control" type="number" min="0" required></td>
+                        <td><input class="form-control" type="text" required></td>
+                        <td><input class="form-control" type="number" min="0" required></td>
                       </tr>
                 </tbody>
           </table>
@@ -137,11 +137,11 @@ function addLine() {
   cell1.outerHTML = '<td><input class="form-control" type="number" min="0" required></td>';
   cell2.outerHTML = '<td><input class="form-control" type="number" min="0" required></td>';
   cell3.outerHTML = '<td><input class="form-control" type="number" min="0" required></td>';
-  cell4.outerHTML = '<td><input class="form-control" type="text" required></td>';
-  cell5.outerHTML = '<td><input class="form-control" type="number" min="0"></td>';
-  cell6.outerHTML = '<td><input class="form-check-input" type="radio"  name="genre'+($num+1)+'" value="Masc" required> Masc </br><input class="form-check-input" type="radio"  name="genre'+($num+1)+'" value="Fem" required>  Fem </td>';
-  cell7.outerHTML = '<td><input class="form-check-input" type="radio"  name="achats'+($num+1)+'" value="Oui" required> Oui<input class="form-check-input" type="radio"  name="achats'+($num+1)+'" value="Non" required> Non</td>';
-  cell8.outerHTML = '<td><input class="form-control" type="number" min="0"></td>';
+  cell4.outerHTML = '<td><input class="form-check-input" type="radio"  name="genre'+($num+1)+'" value="Masc" required> Masc <input class="form-check-input" type="radio"  name="genre'+($num+1)+'" value="Fem" required>  Fem </td>';
+  cell5.outerHTML = '<td><input class="form-check-input" type="radio"  name="achats'+($num+1)+'" value="Oui" required> Oui<input class="form-check-input" type="radio"  name="achats'+($num+1)+'" value="Non" required> Non</td>';
+  cell6.outerHTML = '<td><input class="form-control" type="number" min="0" required></td>';
+  cell7.outerHTML = '<td><input class="form-control" type="text" required></td>';
+  cell8.outerHTML = '<td><input class="form-control" type="number" min="0" required></td>';
   
 }
 
