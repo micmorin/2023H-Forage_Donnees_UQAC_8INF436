@@ -66,7 +66,8 @@ def randomForest(dataX, dataY, verbose = 0):
   #On va donc utiliser la fonction GridSearchCV pour trouver les meilleurs paramètres
   from sklearn.model_selection import GridSearchCV
   #On crée une liste de dictionnaires contenant les paramètres à tester
-  param_grid = {'n_estimators': [10, 100, 200], 'max_features': [2, 4, 6, 8]}
+  param_grid = [{'n_estimators': [10, 100, 200], 'max_features': [2, 4, 6, 8]},
+                {'bootstrap': [False], 'n_estimators': [3, 10], 'max_features': [2, 3, 4]}]
   #On crée un objet GridSearchCV
   grid = GridSearchCV(RandomForestClassifier(), param_grid, refit=True, verbose=0)
   #On entraine le modèle
