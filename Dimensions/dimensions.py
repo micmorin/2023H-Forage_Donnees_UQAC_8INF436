@@ -1,12 +1,11 @@
 import seaborn as sns
 import pandas as pd
 import numpy as np
+
 from sklearn.decomposition import PCA
 
 
-def preparationDeDimension(df):
-   #Réduction de dimension : ACP 
-    
+def reductionDeDimension(df):  
   # On visualise les données avant la réduction de dimention
   sns.pairplot(df, hue = "class_revenue", vars = ['age', 'pages', 'first_item_prize', 'News_click', 'gender_encoded', 'country_encoded', 'ReBuy_encoded'])
   
