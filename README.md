@@ -1,7 +1,7 @@
 # Projet de groupe - 8INF436 - Forage des Données - UQAC – Hiver 2023
 
 # Membres de l'équipe
-- David LELIEVRE 
+- David LELIEVRE - LELD23050303
 - Jules DELAMARE 
 - Amani SATOURI 
 - Michael MORIN - MORM07039500
@@ -14,7 +14,7 @@
 5. [Interface Utilisateur](#interface-utlisateur)
 
 ## Introduction
-Pour notre projet, nous avons décidé d'utiliser un dataset provenant d'un site web d'achat en ligne. Après avoir préparé nos données, vous avons choisis de *réduire/sélectionné* les dimensions *XYZ*. Quant au choix des modèles de classification, nous nous sommes arrêté sur *XYZ* car ils permettent de *raison XYZ*. Finalement, notre interface utilisateur a été établie avec le framework Flask puisque l'équipe était familière avec ce dernier, il permet une association rapide avec le reste du projet en python et l'interface web est facilement accessible par tous.
+Pour notre projet, nous avons décidé d'utiliser un dataset provenant d'un site web d'achat en ligne. Après avoir préparé nos données, vous avons choisis de *réduire/sélectionné* les dimensions *XYZ*. Quant au choix des modèles de classification, nous nous sommes arrêté sur 3 classifieurs différents. Nous avons choisis en premier RandomForest car il est rapide et efficace. Ensuite, nous avons choisis EFDT, également rapide et efficace, mais qui permet de faire de la classification en ligne. Enfin, nous avons choisis FP-Growth, qui est un algorithme qui permet de trouver des règles d'association entre les items.Finalement, notre interface utilisateur a été établie avec le framework Flask puisque l'équipe était familière avec ce dernier, il permet une association rapide avec le reste du projet en python et l'interface web est facilement accessible par tous.
 
 *Recommendations *
 
