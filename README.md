@@ -14,7 +14,7 @@
 5. [Interface Utilisateur](#interface-utlisateur)
 
 ## Introduction
-Pour notre projet, nous avons décidé d'utiliser un dataset provenant d'un site web d'achat en ligne. Après avoir préparé nos données, vous avons choisis de *réduire/sélectionné* les dimensions *XYZ*. Quant au choix des modèles de classification, nous nous sommes arrêté sur 3 classifieurs différents. Nous avons choisis en premier RandomForest car il est rapide et efficace. Ensuite, nous avons choisis EFDT, également rapide et efficace, mais qui permet de faire de la classification en ligne. Enfin, nous avons choisis FP-Growth, qui est un algorithme qui permet de trouver des règles d'association entre les items.Finalement, notre interface utilisateur a été établie avec le framework Flask puisque l'équipe était familière avec ce dernier, il permet une association rapide avec le reste du projet en python et l'interface web est facilement accessible par tous.
+Pour notre projet, nous avons décidé d'utiliser un dataset provenant d'un site web d'achat en ligne. Après avoir préparé nos données, vous avons choisis de *réduire/sélectionné* les dimensions *XYZ*. Quant au choix des modèles de classification, nous nous sommes arrêté sur 3 classifieurs différents. Nous avons choisis en premier RandomForest car il est rapide et efficace. Ensuite, nous avons choisis EFDT, également rapide et efficace, mais qui permet de faire de la classification en ligne. Enfin, nous avons choisis un arbre de décision classique car il est facile à comprendre et à interpréter. Finalement, notre interface utilisateur a été établie avec le framework Flask puisque l'équipe était familière avec ce dernier, il permet une association rapide avec le reste du projet en python et l'interface web est facilement accessible par tous.
 
 *Recommendations *
 
@@ -38,17 +38,25 @@ Nous avons donc fait 3 modeles différents :
 
 ### Random Forest
 
+Un random forest, optimisé avec une gridSearchCV. Avec train/test comme stratégie de validation. <br>
+Les métriques utilisées sont :
+- Précision
+- F1
+- Recall
+
+Grâce à la gridSearchCV, nous avons pu trouver les meilleurs paramètres pour notre modèle et obtenir des résultats plus précis, entre 0,9 et 1 sur toutes les métriques.
+
 ### Decision Tree
 
-Un simple arbre de décision, obptimisé avec une gridSearchCV. Avec train/test comme stratégie de validation. <br>
-Les métrics utilisé sont :
+Un simple arbre de décision, optimisé avec une gridSearchCV. Avec train/test comme stratégie de validation. <br>
+Les métriques utilisées sont :
 - Précision
 - F1
 
 ### Extremely Fast Decision tree
 
 Un extremely Fast Decision Treen avec k-fold comme stratégie de validation.
-Les métric utilisé sont :
+Les métriques utilisées sont :
 - Temps
 - F1
 - Accuracy
