@@ -11,14 +11,14 @@ if __name__ == "__main__":
     elif arg == "verbose=2": verbose = 2
     else: verbose = 0
   
-  print("Preparation Des Donnees")
+  print("\033[33mPreparation Des Donnees\033[0m")
   donnees = preparationDesDonnees(verbose)
 
-  print("Reduction de Dimension")
+  print("\033[33mReduction de Dimension\033[0m")
   donnees = reductionDeDimension(donnees, verbose)
 
-  print("Classification en Trois Modeles")
+  print("\033[33mClassification en Trois Modeles\033[0m")
   modele1, modele2, modele3 = classificationEnTroisModele(donnees, verbose)
 
-  print("Debut de l'interface utilisateur")
+  print("\033[33mDebut de l'interface utilisateur\033[0m")
   interfaceUtilisateur(modele1, modele2, modele3, verbose)
