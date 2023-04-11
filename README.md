@@ -3,7 +3,7 @@
 # Membres de l'équipe
 - David LELIEVRE - LELD23050303
 - Jules DELAMARE - DELJ25090208
-- Amani SATOURI 
+- Amani SATOURI - SATA03620109
 - Michael MORIN - MORM07039500
 
 # Guide du projet
