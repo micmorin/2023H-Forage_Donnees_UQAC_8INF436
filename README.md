@@ -16,6 +16,18 @@
 ## Introduction
 Pour notre projet, nous avons décidé d'utiliser un dataset provenant d'un site web d'achat en ligne. Après avoir préparé nos données, vous avons choisis de *réduire/sélectionné* les dimensions *XYZ*. Quant au choix des modèles de classification, nous nous sommes arrêté sur *XYZ* car ils permettent de *raison XYZ*. Finalement, notre interface utilisateur a été établie avec le framework Flask puisque l'équipe était familière avec ce dernier, il permet une association rapide avec le reste du projet en python et l'interface web est facilement accessible par tous.
 
+*Recommendations *
+
+Il est recommandé d'utiliser un environement virtuel et d'installer les modules nécessaire avant l'exécution ou le développement. De plus, pour le développement, le gitignore est préparé pour VS Code et Python. Voici un rappel des commandes pour ces recommendations:
+```
+python -m venv .env
+.venv/Scripts/activate.bat (Terminal)
+ou
+.venv/Scripts./Activate.ps1 (Powershell)
+pip install -r REQUIREMENTS.txt
+```
+Si un module est ajouté, veuillez utiliser `pip freeze > REQUIREMENTS.txt`.
+
 ## Preparation des données
 
 ## Réduction/ Sélection de dimensions
