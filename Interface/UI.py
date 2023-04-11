@@ -1,6 +1,6 @@
 from flask import Flask, request, render_template, url_for,redirect, flash
 
-def interfaceUtilisateur(modele1, modele2, modele3):
+def interfaceUtilisateur(modele1, modele2, modele3, verbose):
   # Begin Flask App
     app = Flask(__name__)
 

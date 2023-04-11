@@ -3,7 +3,7 @@ from sklearn.ensemble import RandomForestClassifier
 #import train_test_split
 from sklearn.model_selection import train_test_split
 
-def classificationEnTroisModele(donnees):
+def classificationEnTroisModele(donnees, verbose):
 
   #On crée le premier modèle de classification
   randomForest = RandomForestClassifier(n_estimators=100, max_depth=2, random_state=0)

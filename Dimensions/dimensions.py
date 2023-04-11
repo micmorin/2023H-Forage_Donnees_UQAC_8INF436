@@ -4,33 +4,38 @@ import numpy as np
 
 from sklearn.decomposition import PCA
 
-
-def reductionDeDimension(df):  
-  # On visualise les données avant la réduction de dimention
-  sns.pairplot(df, hue = "class_revenue", vars = ['age', 'pages', 'first_item_prize', 'News_click', 'gender_encoded', 'country_encoded', 'ReBuy_encoded'])
+def reductionDeDimension(df, verbose):  
+  if verbose > 1:
+    print("Display data prior to reduction")
+    sns.pairplot(df, hue = "class_revenue", vars = ['age', 'pages', 'first_item_prize', 'News_click', 'gender_encoded', 'country_encoded', 'ReBuy_encoded'])
   
-  # On selectionne les données sans la variable cible
+  if verbose > 0:
+    print("Setting X and Y")
   X = df.drop(["class_revenue"], axis=1)
-  
-  # On selection la variable cible
   y = df["class_revenue"]
   
-  # On réduit à 2 composants
+  if verbose > 0:
+    print("Reducing to 2 components")
   pca = PCA(n_components=2)
   X_reduced = pca.fit_transform(X)
   
-  pca.explained_variance_
-  pca.explained_variance_ratio_
-  pca.singular_values_
-  
-  # On créer un DataFrame pour les composants principaux et pour la visualisation des données
+  if verbose > 1:
+    print("Printing variance info")
+    print(pca.explained_variance_)
+    print(pca.explained_variance_ratio_)
+    print(pca.singular_values_)
+    
+  if verbose > 0:
+    print("Reducing dataset Dimensions")
   PCAResult = pd.DataFrame(X_reduced, columns = [f"PCA-{i}" for i in range (1,3)])
   PCAResult["class_revenue"] = y
   
-  # Les données après la réduction de dimension
-  sns.pairplot(PCAResult, hue = 'class_revenue', vars = ['PCA-1', 'PCA-2'])  
+  if verbose > 1:
+    sns.pairplot(PCAResult, hue = 'class_revenue', vars = ['PCA-1', 'PCA-2'])  
   
-  PCAResult.info()
-  PCAResult.head()
+  if verbose > 0:
+    print("Last verification before return")
+    PCAResult.info()
+    PCAResult.head()
   
   return PCAResult

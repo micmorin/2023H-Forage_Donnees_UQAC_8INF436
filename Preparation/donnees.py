@@ -2,10 +2,11 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 
+from sys import stdout
 from sklearn.impute import SimpleImputer
 from sklearn.preprocessing import FunctionTransformer, OneHotEncoder, StandardScaler, LabelEncoder
 
-def preparationDesDonnees():
+def preparationDesDonnees(verbose):
 
   def detect_missing_values_files(file, missing_values):
     df = pd.read_csv(file, na_values = missing_values)
@@ -42,30 +43,31 @@ def preparationDesDonnees():
     dataset["class_revenue"] = (dataset["revenue"] > moy_rev).astype(int)
     return dataset.drop("revenue", axis = 1)
   
+  if verbose > 1: 
+    print("Reading Customer.csv")
   customer = pd.read_csv("Customer.csv")
 
-  # On examine les données de customer
-  customer.head() 
-  customer.info()
-  customer.describe(include = "all")
+  if verbose > 0: 
+    print("Examining data\n")
+    customer.head() 
+    customer.info()
+    customer.describe(include = "all")
 
-  # visualisation des valeurs numériques avec des histogrammes
-  customer.hist(bins = 50, figsize = (20,15))
-  plt.show()  
+  if verbose > 1: 
+    print("\nVisualizing with Histograms")
+    customer.hist(bins = 50, figsize = (20,15))
+    plt.show()  
 
-  # On initialise la liste qui contient plusieurs caractères qui représentent des données manquantes
   missing_values = ["NaN", "N/a", "na", "unknown", '?','-', np.nan]
 
-  # Affichage du nombre de valeurs manquantes pour les variables du fichier Customer.csv
   df, missing_value_counts = detect_missing_values_files("Customer.csv", missing_values)
-  print(missing_value_counts)
+  if verbose > 1:
+    print("Display missing values")
+    print(df)
 
-  # Fonction qui fait appel à la fonction précédente pour la lecture du fichier 
-  missing_values_location = func_loc_missing_values("Customer.csv", missing_values)
-  print(missing_values_location)
-
-  # Initialisation de la liste qui des données manquantes
-  missing_values = ["NaN", "N/a", "na", "unknown", '?', np.nan]
+  if verbose > 1:
+    print("Display missing values locations")
+    print(func_loc_missing_values("Customer.csv", missing_values))
 
   customer_clean = customer.copy()
 
@@ -82,8 +84,9 @@ def preparationDesDonnees():
   colonnes = ['first_item_prize', 'revenue']
   customer_clean = func_change_dtype(customer_clean, colonnes) 
   
-  # Les variables ont bien étés étés converties en numérique
-  customer_clean.info()
+  if verbose > 0: 
+    print("Verify variables are all numerical")
+    customer_clean.info()
 
   # On sépare les variables numériques des autres variables 
   v_cat = ['gender','country','ReBuy']
@@ -96,9 +99,6 @@ def preparationDesDonnees():
 
   df_customer_num=pd.DataFrame(X_num, columns=customer_num.columns)
 
-  customer_num_copy = df_customer_num.copy() 
-  print(df_customer_num) 
-
   # Gestion des variables quantitatives
   encoder = OneHotEncoder()
   v_cat = customer_clean[['gender','country','ReBuy', 'revenue']]
@@ -106,11 +106,17 @@ def preparationDesDonnees():
 
   customer_num.median().values
   X = df_customer_num
-  v_cat.info()
+
+  if verbose > 0: 
+    print("Display category information")
+    v_cat.info()
 
   dataset = df_customer_num
   dataset_clamp = clamp_replace_bruit(dataset, 0.25, 0.75)
-  print(dataset_clamp) 
+
+  if verbose > 0: 
+    print("Display normalized dataset")
+    print(dataset_clamp) 
 
   #matrice de corrélation
   corr_matrix = X.corr()
@@ -134,7 +140,9 @@ def preparationDesDonnees():
 
   # Numérisation des colonnes et fonction pour encoder 'revenue'
   df = revenue_bin(dataset=df)
-  df.head()
+  if verbose > 0: 
+    print("Verify numerisation and encoding")
+    df.head()
 
   # Standardisation des données
   cols_to_scale = ['age', 'pages', 'first_item_prize', 'News_click']
@@ -148,6 +156,8 @@ def preparationDesDonnees():
 
   df[cols_to_scale] = scaler.fit_transform(df[cols_to_scale])
   df =df.drop(['gender', 'country', 'ReBuy'], axis = 1)
-  df.head()
+  if verbose > 0: 
+    print("Last check before returning data\n")
+    df.head()
 
   return df

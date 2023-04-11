@@ -10,6 +10,7 @@
             "request": "launch",
             "program": "run.py",
             "console": "integratedTerminal",
+            "args": ["verbose=2"],
             "justMyCode": true
         }
     ]
