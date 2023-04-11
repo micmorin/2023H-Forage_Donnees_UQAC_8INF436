@@ -12,6 +12,7 @@ def preparationDeDimension(df):
   
   # On selectionne les données sans la variable cible
   X = df.drop(["class_revenue"], axis=1)
+  
   # On selection la variable cible
   y = df["class_revenue"]
   
