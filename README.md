@@ -2,7 +2,7 @@
 
 # Membres de l'équipe
 - David LELIEVRE - LELD23050303
-- Jules DELAMARE 
+- Jules DELAMARE - DELJ25090208
 - Amani SATOURI 
 - Michael MORIN - MORM07039500
 
@@ -33,5 +33,25 @@ Si un module est ajouté, veuillez utiliser `pip freeze > REQUIREMENTS.txt`.
 ## Réduction/ Sélection de dimensions
 
 ## Modèles de Classification
+
+Nous avons donc fait 3 modeles différents :
+
+### Random Forest
+
+### Decision Tree
+
+Un simple arbre de décision, obptimisé avec une gridSearchCV. Avec train/test comme stratégie de validation. <br>
+Les métrics utilisé sont :
+- Précision
+- F1
+
+### Extremely Fast Decision tree
+
+Un extremely Fast Decision Treen avec k-fold comme stratégie de validation.
+Les métric utilisé sont :
+- Temps
+- F1
+- Accuracy
+- rappel
 
 ## Interface Utilisateur
