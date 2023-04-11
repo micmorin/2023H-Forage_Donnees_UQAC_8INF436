@@ -6,7 +6,7 @@ from sys import stdout
 from sklearn.impute import SimpleImputer
 from sklearn.preprocessing import FunctionTransformer, OneHotEncoder, StandardScaler, LabelEncoder
 
-def preparationDesDonnees(verbose):
+def preparationDesDonnees(verbose = 0):
 
   def detect_missing_values_files(file, missing_values):
     df = pd.read_csv(file, na_values = missing_values)

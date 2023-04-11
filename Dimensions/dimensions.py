@@ -4,7 +4,7 @@ import numpy as np
 
 from sklearn.decomposition import PCA
 
-def reductionDeDimension(df, verbose):  
+def reductionDeDimension(df, verbose = 0):  
   if verbose > 1:
     print("Display data prior to reduction")
     sns.pairplot(df, hue = "class_revenue", vars = ['age', 'pages', 'first_item_prize', 'News_click', 'gender_encoded', 'country_encoded', 'ReBuy_encoded'])
