@@ -2,7 +2,7 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.model_selection import train_test_split, KFold, GridSearchCV
 from sklearn.metrics import accuracy_score, f1_score, recall_score, classification_report, confusion_matrix
-from skmultiflow.trees import ExtremelyFastDecisionTreeClassifier
+#from skmultiflow.trees import ExtremelyFastDecisionTreeClassifier
 
 import time
 import pandas as pd
@@ -110,15 +110,15 @@ def DecisionTree(dataX, dataY, verbose = 0):
 def extremelyFastDecisionTree(dataX, dataY, k, verbose = 0):
 
   #On crée le modèle de classification
-  edtf = ExtremelyFastDecisionTreeClassifier()
+  #edtf = ExtremelyFastDecisionTreeClassifier()
 
   #recherche de la meilleur coupe train/test
-  search = validationCroisee(dataX, dataY, k, edtf)
+  #search = validationCroisee(dataX, dataY, k, edtf)
 
-  if verbose > 0:
-    print(pd.DataFrame(search["scores"]))
+  #if verbose > 0:
+    #print(pd.DataFrame(search["scores"]))
 
-  return edtf
+  return "" #edtf
 
 #Fonction pour faire la validation Croisée des données
 def validationCroisee(dataX, dataY, k, dt = ExtremelyFastDecisionTreeClassifier()):
