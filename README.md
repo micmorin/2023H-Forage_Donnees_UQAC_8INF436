@@ -21,9 +21,9 @@ Pour notre projet, nous avons décidé d'utiliser un dataset provenant d'un site
 Il est recommandé d'utiliser un environement virtuel et d'installer les modules nécessaire avant l'exécution ou le développement. De plus, pour le développement, le gitignore est préparé pour VS Code et Python. Voici un rappel des commandes pour ces recommendations:
 ```
 python -m venv .env
-.venv/Scripts/activate.bat (Terminal)
+.env/Scripts/activate.bat (Terminal)
 ou
-.venv/Scripts./Activate.ps1 (Powershell)
+.env/Scripts./Activate.ps1 (Powershell)
 pip install -r REQUIREMENTS.txt
 ```
 Si un module est ajouté, veuillez utiliser `pip freeze > REQUIREMENTS.txt`.
@@ -33,6 +33,7 @@ Pour la préparation des données, nous avons tout d’abord remarqué que certa
 
 ## Réduction/ Sélection de dimensions
 Nous avons choisi de faire une réduction de dimension en faisant une Analyse de Composante Principale. Nous avons obtenus à l’issu de l’ACP 2 composantes principales. 
+
 ## Modèles de Classification
 
 Nous avons donc fait 3 modeles différents :
