@@ -6,6 +6,8 @@ from sklearn.metrics import accuracy_score, f1_score, recall_score, classificati
 
 import time
 import pandas as pd
+import pickle
+from os.path import isfile
 
 def classificationEnTroisModele(donnees, verbose):
 
@@ -15,12 +17,20 @@ def classificationEnTroisModele(donnees, verbose):
   if verbose > 1:
     print("\033[32mRandom forest\033[0m")
 
-  randomForestModel = randomForest(X, y, verbose)
+  if not isfile('randomForestModel.pkl'):
+    randomForestModel = randomForest(X, y, verbose)
+    pickle.dump(randomForestModel, open('randomForestModel.pkl', 'wb'))
+  else:
+    randomForestModel = pickle.load(open('./randomForestModel.pkl', 'rb'))
 
   if verbose > 1:
     print("\033[32mDecision Tree\033[0m")
   
-  decisionTreeModel = DecisionTree(X, y, verbose)
+  if not isfile('randomForestModel.pkl'):
+    decisionTreeModel = DecisionTree(X, y, verbose)
+    pickle.dump(decisionTreeModel, open('decisionTreeModel.pkl', 'wb'))
+  else:
+    decisionTreeModel = pickle.load(open('./decisionTreeModel.pkl', 'rb'))
 
   if verbose > 1:
     print("\033[32mExtremely Fast Decision Tree\033[0m")
@@ -121,7 +131,7 @@ def extremelyFastDecisionTree(dataX, dataY, k, verbose = 0):
   return "" #edtf
 
 #Fonction pour faire la validation Croisée des données
-def validationCroisee(dataX, dataY, k, dt = ExtremelyFastDecisionTreeClassifier()):
+def validationCroisee(dataX, dataY, k, dt):
   kf = KFold(n_splits=k)
 
   #Tableau des différents résultats
