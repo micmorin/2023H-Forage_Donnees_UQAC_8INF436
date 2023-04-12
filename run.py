@@ -21,4 +21,4 @@ if __name__ == "__main__":
   modele1, modele2, modele3 = classificationEnTroisModele(donnees, verbose)
 
   print("\033[33mDebut de l'interface utilisateur\033[0m")
-  interfaceUtilisateur(modele1, modele2, modele3, verbose)
+  interfaceUtilisateur(modele1, modele2, modele3, donnees, verbose)

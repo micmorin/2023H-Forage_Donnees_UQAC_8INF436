@@ -2,7 +2,8 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.model_selection import train_test_split, KFold, GridSearchCV
 from sklearn.metrics import accuracy_score, f1_score, recall_score, classification_report, confusion_matrix
-#from skmultiflow.trees import ExtremelyFastDecisionTreeClassifier
+from river.tree import ExtremelyFastDecisionTreeClassifier
+from river import model_selection, metrics, utils
 
 import time
 import pandas as pd
@@ -26,7 +27,7 @@ def classificationEnTroisModele(donnees, verbose):
   if verbose > 1:
     print("\033[32mDecision Tree\033[0m")
   
-  if not isfile('randomForestModel.pkl'):
+  if not isfile('decisionTreeModel.pkl'):
     decisionTreeModel = DecisionTree(X, y, verbose)
     pickle.dump(decisionTreeModel, open('decisionTreeModel.pkl', 'wb'))
   else:
@@ -35,10 +36,10 @@ def classificationEnTroisModele(donnees, verbose):
   if verbose > 1:
     print("\033[32mExtremely Fast Decision Tree\033[0m")
 
-  extremelyFastDecisionTreeModel = extremelyFastDecisionTree(X, y, 5, verbose)
+  extremelyFastDecisionTreeModel = extremelyFastDecisionTree(X, y, verbose)
 
 
-  return randomForestModel, extremelyFastDecisionTreeModel, decisionTreeModel
+  return randomForestModel, decisionTreeModel, extremelyFastDecisionTreeModel
 
 
 #Fonction pour le premier modele, random forest
@@ -92,43 +93,73 @@ def DecisionTree(dataX, dataY, verbose = 0):
 
   X_train, X_test, y_train, y_test = train_test_split(dataX, dataY, test_size=0.2, random_state=42)
 
-  #On crée le modele
+  #On crée le premier modèle de classification
   dt = DecisionTreeClassifier()
+  dt.fit(X_train, y_train)
+  dt.score(X_test, y_test)
 
+  #Evaluation du modèle via les métriques de validation adequates
+  y_pred = dt.predict(X_test)
+
+  if verbose > 1:
+    print(confusion_matrix(y_test, y_pred))
+
+  if verbose > 0:
+    print(classification_report(y_test, y_pred))
+
+  #On crée une liste de dictionnaires contenant les paramètres à tester
   param_grid = {
       'criterion': ['gini', 'entropy'],
       'max_depth': [None, 5, 10, 15],
       'min_samples_split': [2, 5, 10],
       'min_samples_leaf': [1, 2, 4],
   }
-
-  dt = GridSearchCV(dt, param_grid, cv=5)
-  dt.fit(X_train, y_train)
+  
+  #On crée un objet GridSearchCV
+  grid = GridSearchCV(DecisionTreeClassifier(), param_grid, refit=True, verbose=0)
+  grid.fit(X_train, y_train)
 
   if verbose > 0:
-    # On test l'arbre en faisant une prédiction sur l'ensemble des donnée
-    prediction = dt.predict(X_test)
-    accuracy = accuracy_score(y_test, prediction)
-    f1 = f1_score(y_test, prediction)
+    print(grid.best_params_)
+    print(grid.best_estimator_)
 
-    print('Précision : ' + str(accuracy*100) + "%")
-    print("F1-score :", f1)
-  
+  #On crée un nouveau modèle avec les meilleurs paramètres
+  dt = grid.best_estimator_
+  dt.fit(X_train, y_train)
+  dt.score(X_test, y_test)
+
+  #Evaluation du modèle via les métriques de validation adequates
+  y_pred = dt.predict(X_test)
+
+  if verbose > 1:
+    print(confusion_matrix(y_test, y_pred))
+
+  if verbose > 0:
+    print(classification_report(y_test, y_pred))
+
   return dt
 
 #Fonction pour le troisième modèle, Extremely Fast Decision Tree
-def extremelyFastDecisionTree(dataX, dataY, k, verbose = 0):
+def extremelyFastDecisionTree(dataX, dataY, verbose = 0):
+  X_train, X_test, y_train, y_test = train_test_split(dataX, dataY, test_size=0.2, random_state=42)
 
-  #On crée le modèle de classification
-  #edtf = ExtremelyFastDecisionTreeClassifier()
+  #On crée le premier modèle de classification
+  model = ExtremelyFastDecisionTreeClassifier()
 
-  #recherche de la meilleur coupe train/test
-  #search = validationCroisee(dataX, dataY, k, edtf)
+  models = utils.expand_param_grid(model, {
+    'grace_period': [150, 200, 250],
+    'min_samples_reevaluate':[15,20,25],
+    'split_criterion':['gini', 'info_gain', 'hellinger']
+  })
 
-  #if verbose > 0:
-    #print(pd.DataFrame(search["scores"]))
+  sh = model_selection.SuccessiveHalvingClassifier(
+     models,
+     metric=metrics.Accuracy(),
+     budget=2000,
+     eta=2,
+     verbose=True )
 
-  return "" #edtf
+  return sh.best_model
 
 #Fonction pour faire la validation Croisée des données
 def validationCroisee(dataX, dataY, k, dt):
@@ -170,4 +201,3 @@ def validationCroisee(dataX, dataY, k, dt):
     i+=1
   
   return {"bestFitID":bestFitID,"scores":{"f1":f1,"precision":precision,"rappel":rappel,"time":elapsedTime}}
-
