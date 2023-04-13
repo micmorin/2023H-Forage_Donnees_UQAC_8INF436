@@ -1,0 +1,6 @@
+COPIE DE Scikit-Multiflow
+Seul changement est a metrics/_classification_perfomance_evaluator.pyx
+np.float -> np.float64
+np.float_t -> np.float64_t
+
+COPYRIGHTS TO ORIGINAL AUTHORS
