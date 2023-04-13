@@ -21,7 +21,7 @@ def classificationEnTroisModele(donnees, verbose):
     print("\033[32mRandom forest\033[0m")
 
   if not isfile('./Classification/randomForestModel.pkl'):
-    randomForestModel = randomForest(X_train, y_train, X_test, y_test, verbose)
+    randomForestModel = randomForest(X_train.to_numpy(), y_train.to_numpy(), X_test.to_numpy(), y_test.to_numpy(), verbose)
     pickle.dump(randomForestModel, open('./Classification/randomForestModel.pkl', 'wb'))
   else:
     randomForestModel = pickle.load(open('./Classification/randomForestModel.pkl', 'rb'))
@@ -30,7 +30,7 @@ def classificationEnTroisModele(donnees, verbose):
     print("\033[32mDecision Tree\033[0m")
   
   if not isfile('./Classification/decisionTreeModel.pkl'):
-    decisionTreeModel = DecisionTree(X_train, y_train, X_test, y_test, verbose)
+    decisionTreeModel = DecisionTree(X_train.to_numpy(), y_train.to_numpy(), X_test.to_numpy(), y_test.to_numpy(), verbose)
     pickle.dump(decisionTreeModel, open('./Classification/decisionTreeModel.pkl', 'wb'))
   else:
     decisionTreeModel = pickle.load(open('./Classification/decisionTreeModel.pkl', 'rb'))

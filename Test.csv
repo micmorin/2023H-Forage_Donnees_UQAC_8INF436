@@ -1,0 +1,1012 @@
+age,pages,first_item_prize,gender,ReBuy,News_click,country,revenue
+41,6,28,Fem,FALSE,4,China,113
+34,4,15.5,Fem,TRUE,2,China,36
+38,5,?,Fem,FALSE,7,China,111
+20,1,44,Fem,FALSE,2,China,71
+39,10,10,Fem,TRUE,4,China,80
+39,8,44,Fem,FALSE,5,China,unknown
+36,6,44,Masc,FALSE,2,China,51
+68,4,57,Masc,FALSE,7,China,128
+42,7,42,Masc,TRUE,5,China,114
+40,12,42,Fem,FALSE,5,China,109
+35,9,78,Masc,TRUE,3,China,42
+28,3,102,Masc,FALSE,0,China,28
+39,5,57,Fem,TRUE,4,China,165
+25,7,78,Masc,FALSE,1,China,93
+35,5,28,Fem,FALSE,1,China,40
+36,8,117,Fem,FALSE,4,China,311
+40,3,15.5,Masc,FALSE,7,China,60
+73,8,102,Fem,FALSE,6,China,188
+33,5,28,Masc,TRUE,6,China,73
+42,6,42,Masc,FALSE,3,China,39
+37,8,102,Masc,FALSE,7,China,235
+35,8,15.5,Masc,TRUE,4,China,106
+32,4,22,Fem,FALSE,3,China,66
+49,2,22,Masc,FALSE,1,China,61
+39,5,15.5,Fem,TRUE,4,China,118
+44,5,117,Fem,FALSE,5,China,170
+29,5,57,Fem,TRUE,4,China,192
+37,7,22,Fem,TRUE,4,China,65
+53,8,22,Fem,FALSE,3,China,42
+35,6,44,Fem,FALSE,2,China,57
+21,3,22,Fem,FALSE,6,China,69
+45,8,10,Fem,FALSE,3,China,40
+32,5,44,Fem,FALSE,6,China,130
+33,10,78,Fem,FALSE,5,China,224
+24,4,57,Fem,FALSE,5,China,123
+51,12,42,Fem,FALSE,6,China,121
+29,8,78,Masc,FALSE,4,China,191
+57,4,15.5,Masc,FALSE,7,China,80
+49,5,44,Masc,FALSE,0,China,85
+33,7,28,Fem,FALSE,1,China,41
+29,6,15.5,Masc,FALSE,4,China,90
+45,4,117,Masc,TRUE,2,China,108
+45,5,15.5,Fem,FALSE,7,China,73
+34,1,102,Masc,FALSE,2,China,130
+40,10,15.5,Fem,TRUE,4,China,109
+72,8,28,Fem,FALSE,5,China,54
+28,6,10,Masc,FALSE,2,China,49
+33,4,10,Fem,FALSE,7,China,74
+32,7,44,Masc,TRUE,5,China,258
+32,12,44,Masc,FALSE,5,China,68
+31,9,15.5,Masc,TRUE,3,China,52
+45,3,102,Masc,FALSE,0,China,87
+39,5,15.5,Fem,TRUE,4,China,105
+33,7,22,Masc,FALSE,1,China,24
+39,5,28,Fem,FALSE,1,China,54
+47,8,117,Fem,FALSE,4,China,245
+38,3,44,Fem,FALSE,7,China,79
+28,8,15.5,Fem,FALSE,6,China,106
+53,5,42,Fem,TRUE,6,China,76
+41,6,44,Fem,FALSE,3,China,65
+30,8,28,Fem,FALSE,7,China,125
+32,8,15.5,Fem,TRUE,4,China,130
+34,4,28,Fem,FALSE,3,China,48
+37,2,44,Fem,FALSE,1,China,46
+23,5,10,Fem,TRUE,4,China,121
+33,5,44,Fem,FALSE,5,China,143
+29,5,44,Masc,TRUE,4,China,234
+41,7,57,Masc,TRUE,4,China,191
+40,8,42,Masc,FALSE,3,China,66
+43,6,42,Fem,FALSE,2,China,36
+29,3,78,Masc,FALSE,6,China,139
+44,8,102,Masc,FALSE,3,China,115
+44,5,57,Fem,FALSE,6,China,132
+33,10,78,Masc,FALSE,5,China,81
+32,4,28,Fem,FALSE,5,China,109
+33,12,117,Fem,FALSE,6,China,371
+51,8,15.5,Masc,FALSE,4,China,56
+30,4,102,Fem,FALSE,7,China,215
+30,5,28,Masc,FALSE,0,China,57
+28,7,42,Masc,FALSE,1,China,24
+42,6,102,Masc,FALSE,4,China,238
+25,4,15.5,Masc,TRUE,2,China,66
+26,5,22,Fem,FALSE,7,China,70
+43,1,22,Masc,FALSE,2,China,34
+33,10,15.5,Fem,TRUE,4,China,56
+41,8,117,Fem,FALSE,5,China,255
+31,6,57,Fem,FALSE,2,China,60
+28,4,22,Fem,FALSE,7,China,118
+35,7,22,Fem,TRUE,5,China,96
+31,12,44,Fem,FALSE,5,China,124
+54,9,22,Fem,TRUE,3,China,59
+50,3,10,Fem,FALSE,0,China,32
+36,5,44,Fem,TRUE,4,China,76
+39,7,78,Fem,FALSE,1,China,60
+38,5,57,Fem,FALSE,1,China,55
+29,8,42,Fem,FALSE,4,China,166
+36,3,78,Masc,FALSE,7,China,298
+27,8,15.5,Masc,FALSE,6,China,55
+38,5,44,Masc,TRUE,6,China,95
+30,6,28,Fem,FALSE,3,China,24
+29,8,15.5,Masc,FALSE,7,China,110
+38,8,117,Masc,TRUE,4,China,361
+26,4,15.5,Fem,FALSE,3,China,24
+38,2,102,Masc,FALSE,1,China,95
+29,5,15.5,Fem,TRUE,4,China,21
+32,5,28,Fem,FALSE,5,China,85
+41,5,10,Masc,TRUE,4,China,117
+51,7,10,Fem,TRUE,4,China,67
+48,8,44,Masc,FALSE,3,China,39
+28,6,44,Masc,FALSE,2,China,52
+38,3,15.5,Masc,FALSE,6,China,120
+35,8,102,Masc,FALSE,3,China,102
+38,5,?,Fem,FALSE,6,China,95
+27,10,22,Masc,FALSE,5,China,112
+42,4,28,Fem,FALSE,5,China,89
+41,12,117,Fem,FALSE,6,China,179
+36,8,44,Fem,FALSE,4,China,193
+58,4,15.5,Fem,FALSE,7,China,42
+28,5,42,Fem,FALSE,0,China,41
+26,7,44,Fem,FALSE,1,China,58
+43,6,28,Fem,FALSE,4,China,87
+26,4,15.5,Fem,TRUE,2,China,25
+32,5,28,Fem,FALSE,7,China,85
+34,1,44,Fem,FALSE,2,China,22
+28,10,10,Fem,TRUE,4,China,108
+67,8,44,Fem,FALSE,5,China,171
+22,6,44,Masc,FALSE,2,China,29
+25,4,57,Masc,FALSE,7,China,208
+34,7,42,Masc,TRUE,5,China,105
+45,12,42,Fem,FALSE,5,China,113
+45,9,78,Masc,TRUE,3,China,36
+36,3,102,Masc,FALSE,0,China,94
+44,5,57,Fem,TRUE,4,China,193
+66,7,78,Masc,FALSE,1,China,92
+47,5,28,Fem,FALSE,1,China,37
+31,8,117,Fem,FALSE,4,China,271
+67,3,15.5,Masc,FALSE,7,China,108
+39,8,102,Fem,FALSE,6,China,217
+33,5,28,Masc,TRUE,6,China,81
+38,6,42,Masc,FALSE,3,China,42
+43,8,102,Masc,FALSE,7,China,131
+29,8,15.5,Masc,TRUE,4,China,75
+31,4,22,Fem,FALSE,3,China,34
+47,2,22,Masc,FALSE,1,China,50
+37,5,15.5,Fem,TRUE,4,China,57
+30,5,117,Fem,FALSE,5,China,255
+37,5,57,Fem,TRUE,4,China,96
+33,7,22,Fem,TRUE,4,China,84
+30,8,22,Fem,FALSE,3,China,22
+35,6,44,Fem,FALSE,2,China,54
+38,3,22,Fem,FALSE,6,China,117
+41,8,10,Fem,FALSE,3,China,13
+36,5,44,Fem,FALSE,6,China,140
+24,10,78,Fem,FALSE,5,China,171
+32,4,57,Fem,FALSE,5,China,184
+41,12,42,Fem,FALSE,6,China,127
+19,8,78,Masc,FALSE,4,China,130
+36,4,15.5,Masc,FALSE,7,China,60
+41,5,44,Masc,FALSE,0,China,54
+30,7,28,Fem,FALSE,1,China,35
+47,6,15.5,Masc,FALSE,4,China,92
+27,4,117,Masc,TRUE,2,China,83
+24,5,15.5,Fem,FALSE,7,China,52
+27,1,102,Masc,FALSE,2,China,129
+33,10,15.5,Fem,TRUE,4,China,112
+41,8,28,Fem,FALSE,5,China,131
+30,6,10,Masc,FALSE,2,China,46
+38,4,10,Fem,FALSE,7,China,104
+35,7,44,Masc,TRUE,5,China,157
+44,12,44,Masc,FALSE,5,China,93
+27,9,15.5,Masc,TRUE,3,China,38
+36,3,102,Masc,FALSE,0,China,140
+36,5,15.5,Fem,TRUE,4,China,65
+32,7,22,Masc,FALSE,1,China,56
+50,5,28,Fem,FALSE,1,China,19
+29,8,117,Fem,FALSE,4,China,353
+30,3,44,Fem,FALSE,7,China,131
+42,8,15.5,Fem,FALSE,6,China,61
+26,5,42,Fem,TRUE,6,China,163
+50,6,44,Fem,FALSE,3,China,67
+39,8,28,Fem,FALSE,7,China,158
+32,8,15.5,Fem,TRUE,4,China,86
+34,4,28,Fem,FALSE,3,China,40
+30,2,44,Fem,FALSE,1,China,56
+39,5,10,Fem,TRUE,4,China,80
+37,5,44,Fem,FALSE,5,China,157
+30,5,44,Masc,TRUE,4,China,137
+27,7,57,Masc,TRUE,4,China,159
+31,8,42,Masc,FALSE,3,China,55
+54,6,42,Fem,FALSE,2,China,77
+39,3,78,Masc,FALSE,6,China,106
+73,8,102,Masc,FALSE,3,China,114
+40,5,57,Fem,FALSE,6,China,90
+35,10,78,Masc,FALSE,5,China,150
+27,4,28,Fem,FALSE,5,China,85
+35,12,117,Fem,FALSE,6,China,304
+48,8,15.5,Masc,FALSE,4,China,97
+19,4,102,Fem,FALSE,7,China,207
+24,5,28,Masc,FALSE,0,China,49
+29,7,42,Masc,FALSE,1,China,85
+27,4,42,Fem,TRUE,6,India,54
+34,6,57,Fem,FALSE,0,India,53
+39,4,22,Fem,TRUE,4,India,100
+31,5,44,Fem,FALSE,2,India,56
+53,8,44,Fem,TRUE,5,India,149
+20,4,117,Fem,TRUE,1,India,86
+44,6,44,Fem,FALSE,1,India,30
+34,5,42,Masc,FALSE,4,India,121
+50,7,15.5,Fem,FALSE,2,India,28
+26,6,44,Masc,FALSE,4,India,147
+35,5,42,Fem,FALSE,9,India,160
+26,4,22,Fem,TRUE,2,India,22
+29,8,10,Fem,TRUE,6,India,26
+40,5,44,Masc,TRUE,2,India,56
+45,4,102,Masc,TRUE,5,India,261
+38,6,28,Fem,FALSE,1,India,28
+64,5,42,Fem,FALSE,4,India,80
+33,2,102,Fem,FALSE,10,India,211
+34,3,22,Fem,FALSE,5,India,76
+37,4,15.5,Fem,FALSE,3,India,19
+47,7,15.5,Fem,TRUE,6,India,43
+32,6,102,Masc,FALSE,2,India,74
+48,5,57,Masc,FALSE,2,India,58
+45,4,57,Masc,FALSE,6,India,77
+34,9,10,Fem,FALSE,5,India,55
+46,9,44,Fem,FALSE,6,India,178
+41,3,22,Masc,FALSE,7,India,59
+23,7,44,Fem,FALSE,3,India,49
+35,4,44,Fem,TRUE,6,India,51
+47,3,102,Fem,FALSE,10,India,137
+41,7,15.5,Fem,FALSE,2,India,14
+78,9,22,Fem,FALSE,1,India,45
+37,6,28,Fem,FALSE,4,India,78
+34,6,42,Fem,TRUE,10,India,50
+41,3,42,Fem,FALSE,7,India,74
+43,3,44,Fem,TRUE,4,India,154
+30,3,22,Fem,FALSE,0,India,20
+38,9,22,Masc,FALSE,4,India,28
+52,7,15.5,Fem,FALSE,5,India,60
+31,6,57,Masc,FALSE,3,India,23
+40,4,10,Fem,TRUE,6,India,50
+51,6,78,Fem,FALSE,0,India,88
+26,4,57,Fem,TRUE,4,India,171
+37,5,15.5,Masc,FALSE,2,India,41
+27,8,42,Masc,TRUE,5,India,123
+28,4,44,Fem,TRUE,1,India,49
+60,6,28,Fem,FALSE,1,India,29
+33,5,78,Fem,FALSE,4,India,184
+39,7,15.5,Fem,FALSE,2,India,22
+36,6,22,Fem,FALSE,4,India,82
+25,5,117,Fem,FALSE,9,India,332
+53,4,22,Masc,TRUE,2,India,22
+50,8,42,Masc,TRUE,6,India,123
+42,5,15.5,Masc,TRUE,2,India,19
+32,4,22,Fem,TRUE,5,India,50
+40,6,22,Fem,FALSE,1,India,15
+32,5,102,Masc,FALSE,4,India,161
+45,2,44,Fem,FALSE,10,India,84
+40,3,22,Fem,FALSE,5,India,69
+46,4,57,Fem,FALSE,3,India,43
+27,7,42,Fem,TRUE,6,India,131
+43,6,57,Fem,FALSE,2,India,46
+39,5,22,Fem,FALSE,2,India,27
+45,4,44,Fem,FALSE,6,India,116
+37,9,44,Fem,FALSE,5,India,123
+32,9,117,Fem,FALSE,6,India,133
+37,3,44,Fem,FALSE,7,India,67
+22,7,42,Masc,FALSE,3,India,28
+34,4,15.5,Fem,TRUE,6,India,55
+29,3,44,Masc,FALSE,10,India,78
+36,7,42,Fem,FALSE,2,India,33
+45,9,22,Fem,FALSE,1,India,48
+37,6,10,Fem,FALSE,4,India,63
+32,6,44,Masc,TRUE,10,India,140
+43,3,102,Masc,FALSE,7,India,197
+47,3,28,Fem,TRUE,4,India,70
+43,3,42,Fem,FALSE,0,India,38
+37,9,102,Fem,FALSE,4,India,216
+34,7,22,Fem,FALSE,5,India,69
+37,6,15.5,Fem,FALSE,3,India,14
+31,4,15.5,Fem,TRUE,6,India,53
+34,6,102,Masc,FALSE,0,India,117
+34,4,57,Masc,TRUE,4,India,153
+33,5,57,Masc,FALSE,2,India,46
+46,8,10,Fem,TRUE,5,India,40
+37,4,44,Fem,TRUE,1,India,20
+46,6,22,Masc,FALSE,1,India,31
+48,5,44,Fem,FALSE,4,India,128
+43,7,44,Fem,FALSE,2,India,50
+49,6,102,Fem,FALSE,4,India,196
+32,5,15.5,Fem,FALSE,9,India,39
+33,4,22,Fem,TRUE,2,India,28
+36,8,28,Fem,TRUE,6,India,96
+43,5,42,Fem,TRUE,2,India,4
+45,4,42,Fem,TRUE,5,India,143
+27,6,44,Fem,FALSE,1,India,42
+33,5,22,Fem,FALSE,4,India,63
+38,2,22,Masc,FALSE,10,India,33
+32,3,15.5,Fem,FALSE,5,India,35
+46,4,57,Masc,FALSE,3,India,73
+45,7,10,Fem,TRUE,6,India,57
+45,6,78,Fem,FALSE,2,India,55
+47,5,57,Fem,FALSE,2,India,34
+22,4,15.5,Masc,FALSE,6,India,83
+69,9,42,Masc,FALSE,5,India,110
+34,9,44,Fem,FALSE,6,India,86
+36,3,28,Fem,FALSE,7,India,63
+39,7,78,Fem,FALSE,3,India,56
+47,4,15.5,Fem,TRUE,6,India,46
+40,3,22,Fem,FALSE,10,India,71
+47,7,117,Fem,FALSE,2,India,52
+33,9,22,Masc,FALSE,1,India,34
+35,6,42,Masc,FALSE,4,India,104
+22,6,15.5,Masc,TRUE,10,India,51
+29,3,22,Fem,FALSE,7,India,54
+77,3,22,Fem,TRUE,4,India,44
+27,3,102,Masc,FALSE,0,India,69
+26,9,44,Fem,FALSE,4,India,76
+35,7,22,Fem,FALSE,5,India,74
+30,6,57,Fem,FALSE,3,India,18
+55,4,42,Fem,TRUE,6,India,91
+33,6,57,Fem,FALSE,0,India,10
+31,4,22,Fem,TRUE,4,India,55
+43,5,44,Fem,FALSE,2,India,34
+45,8,44,Fem,TRUE,5,India,126
+33,4,117,Fem,TRUE,1,India,78
+33,6,44,Fem,FALSE,1,India,44
+46,5,42,Masc,FALSE,4,India,78
+22,7,15.5,Fem,FALSE,2,India,16
+24,6,44,Masc,FALSE,4,India,114
+45,5,42,Fem,FALSE,9,India,103
+27,4,22,Fem,TRUE,2,India,18
+45,8,10,Fem,TRUE,6,India,33
+36,5,44,Masc,TRUE,2,India,43
+28,4,102,Masc,TRUE,5,India,64
+30,6,28,Fem,FALSE,1,India,28
+50,5,42,Fem,FALSE,4,India,99
+19,2,102,Fem,FALSE,10,India,147
+35,3,22,Fem,FALSE,5,India,100
+74,4,15.5,Fem,FALSE,3,India,27
+32,7,15.5,Fem,TRUE,6,India,41
+41,6,102,Masc,FALSE,2,India,66
+37,5,57,Masc,FALSE,2,India,56
+30,4,57,Masc,FALSE,6,India,67
+36,9,10,Fem,FALSE,5,India,60
+43,9,44,Fem,FALSE,6,India,84
+44,3,22,Masc,FALSE,7,India,46
+42,7,44,Fem,FALSE,3,India,40
+31,4,44,Fem,TRUE,6,India,162
+29,3,102,Fem,FALSE,10,India,193
+34,7,15.5,Fem,FALSE,2,India,26
+40,9,22,Fem,FALSE,1,India,21
+37,6,28,Fem,FALSE,4,India,85
+40,6,42,Fem,TRUE,10,India,168
+33,3,42,Fem,FALSE,7,India,110
+74,3,44,Fem,TRUE,4,India,76
+26,3,22,Fem,FALSE,0,India,28
+28,9,22,Masc,FALSE,4,India,69
+54,7,15.5,Fem,FALSE,5,India,42
+36,6,57,Masc,FALSE,3,India,42
+38,4,10,Fem,TRUE,6,India,48
+31,6,78,Fem,FALSE,0,India,75
+45,4,57,Fem,TRUE,4,India,133
+48,5,15.5,Masc,FALSE,2,India,23
+37,8,42,Masc,TRUE,5,India,77
+24,4,44,Fem,TRUE,1,India,51
+37,6,28,Fem,FALSE,1,India,32
+38,5,78,Fem,FALSE,4,India,143
+28,7,15.5,Fem,FALSE,2,India,28
+37,6,22,Fem,FALSE,4,India,71
+30,5,117,Fem,FALSE,9,India,251
+29,4,22,Masc,TRUE,2,India,29
+36,8,42,Masc,TRUE,6,India,73
+46,5,15.5,Masc,TRUE,2,India,21
+45,4,22,Fem,TRUE,5,India,35
+45,6,22,Fem,FALSE,1,India,23
+35,5,102,Masc,FALSE,4,India,162
+46,2,44,Fem,FALSE,10,India,95
+39,3,22,Fem,FALSE,5,India,58
+32,4,57,Fem,FALSE,3,India,52
+38,7,42,Fem,TRUE,6,India,115
+39,6,57,Fem,FALSE,2,India,70
+37,5,22,Fem,FALSE,2,India,29
+27,4,44,Fem,FALSE,6,India,106
+45,9,44,Fem,FALSE,5,India,95
+18,9,117,Fem,FALSE,6,India,181
+44,3,44,Fem,FALSE,7,India,91
+37,7,42,Masc,FALSE,3,India,43
+38,4,15.5,Fem,TRUE,6,India,77
+47,3,44,Masc,FALSE,10,India,73
+28,7,42,Fem,FALSE,2,India,31
+69,9,22,Fem,FALSE,1,India,30
+29,6,10,Fem,FALSE,4,India,44
+20,6,44,Masc,TRUE,10,India,84
+39,3,102,Masc,FALSE,7,India,130
+41,3,28,Fem,TRUE,4,India,55
+35,3,42,Fem,FALSE,0,India,52
+40,9,102,Fem,FALSE,4,India,149
+56,7,22,Fem,FALSE,5,India,75
+40,6,15.5,Fem,FALSE,3,India,17
+36,5,44,Fem,FALSE,10,United States,194
+41,5,22,Masc,TRUE,0,United States,133
+37,6,10,Fem,FALSE,5,United States,203
+35,5,44,Masc,FALSE,4,United States,283
+27,5,44,Fem,FALSE,5,United States,176
+37,9,15.5,Fem,FALSE,5,United States,147
+29,6,42,Masc,TRUE,7,United States,362
+39,5,42,Masc,FALSE,1,United States,113
+38,7,44,Masc,TRUE,10,United States,352
+36,4,57,Fem,FALSE,3,United States,144
+44,7,117,Masc,FALSE,3,United States,138
+41,7,57,Fem,FALSE,4,United States,236
+26,6,42,Fem,FALSE,4,United States,268
+27,4,44,Masc,FALSE,3,United States,140
+37,7,44,Fem,FALSE,3,United States,68
+34,9,28,Fem,FALSE,4,United States,309
+33,4,44,Fem,FALSE,10,United States,211
+40,9,57,Masc,FALSE,5,United States,422
+33,4,28,Fem,FALSE,10,United States,135
+44,6,57,Fem,FALSE,5,United States,278
+23,5,15.5,Fem,TRUE,4,United States,146
+44,3,78,Fem,FALSE,5,United States,370
+46,4,102,Fem,FALSE,6,United States,386
+35,6,42,Fem,FALSE,0,United States,135
+36,5,28,Fem,FALSE,2,United States,79
+24,5,57,Masc,FALSE,7,United States,272
+43,9,44,Masc,FALSE,6,United States,217
+60,6,42,Masc,FALSE,7,United States,230
+34,7,44,Masc,TRUE,3,United States,148
+52,5,10,Fem,FALSE,2,United States,98
+48,5,102,Fem,FALSE,2,United States,180
+25,7,10,Masc,TRUE,2,United States,160
+41,7,44,Fem,FALSE,2,United States,86
+33,5,15.5,Masc,FALSE,3,United States,84
+38,5,44,Fem,FALSE,6,United States,195
+31,5,57,Fem,FALSE,6,United States,85
+39,6,15.5,Masc,FALSE,5,United States,145
+51,4,22,Masc,FALSE,2,United States,144
+27,4,57,Masc,FALSE,3,United States,168
+41,7,22,Fem,FALSE,10,United States,239
+34,5,57,Masc,FALSE,10,United States,341
+49,5,22,Fem,TRUE,0,United States,68
+43,6,44,Fem,FALSE,5,United States,285
+31,5,44,Masc,FALSE,4,United States,437
+30,5,15.5,Fem,FALSE,5,United States,287
+40,9,57,Fem,FALSE,5,United States,239
+27,6,15.5,Fem,TRUE,7,United States,294
+30,5,44,Masc,FALSE,1,United States,145
+28,7,10,Fem,TRUE,10,United States,258
+29,4,15.5,Fem,FALSE,3,United States,95
+37,7,22,Fem,FALSE,3,United States,106
+35,7,44,Fem,FALSE,4,United States,239
+36,6,102,Fem,FALSE,4,United States,211
+26,4,57,Fem,FALSE,3,United States,111
+43,7,57,Fem,FALSE,3,United States,83
+36,9,22,Masc,FALSE,4,United States,234
+28,4,44,Masc,FALSE,10,United States,287
+41,9,44,Masc,FALSE,5,United States,285
+37,4,15.5,Masc,FALSE,10,United States,270
+30,6,22,Fem,FALSE,5,United States,354
+35,5,44,Fem,TRUE,4,United States,266
+41,3,22,Masc,FALSE,5,United States,156
+42,4,10,Fem,FALSE,6,United States,136
+48,6,44,Masc,FALSE,0,United States,115
+54,5,44,Fem,FALSE,2,United States,99
+29,5,15.5,Fem,FALSE,7,United States,255
+38,9,42,Masc,FALSE,6,United States,175
+31,6,42,Masc,FALSE,7,United States,274
+32,7,44,Masc,TRUE,3,United States,164
+36,5,57,Fem,FALSE,2,United States,117
+41,5,117,Masc,FALSE,2,United States,162
+70,7,57,Fem,TRUE,2,United States,292
+46,7,42,Fem,FALSE,2,United States,68
+51,5,44,Masc,FALSE,3,United States,124
+49,5,44,Fem,FALSE,6,United States,303
+29,5,28,Fem,FALSE,6,United States,351
+49,6,44,Fem,FALSE,5,United States,112
+38,4,57,Masc,FALSE,2,United States,145
+48,4,28,Fem,FALSE,3,United States,107
+31,7,57,Fem,FALSE,10,United States,211
+44,5,15.5,Fem,FALSE,10,United States,211
+33,5,78,Fem,TRUE,0,United States,169
+46,6,102,Fem,FALSE,5,United States,235
+38,5,42,Fem,FALSE,4,United States,235
+33,5,28,Fem,FALSE,5,United States,198
+41,9,57,Masc,FALSE,5,United States,317
+39,6,44,Masc,TRUE,7,United States,345
+48,5,42,Masc,FALSE,1,United States,121
+27,7,44,Masc,TRUE,10,United States,490
+49,4,10,Fem,FALSE,3,United States,97
+30,7,102,Fem,FALSE,3,United States,173
+36,7,10,Masc,FALSE,4,United States,236
+25,6,44,Fem,FALSE,4,United States,175
+31,4,15.5,Masc,FALSE,3,United States,107
+44,7,44,Fem,FALSE,3,United States,88
+43,9,57,Fem,FALSE,4,United States,285
+43,4,15.5,Masc,FALSE,10,United States,172
+38,9,22,Masc,FALSE,5,United States,349
+47,4,57,Masc,FALSE,10,United States,355
+34,6,22,Fem,FALSE,5,United States,242
+28,5,57,Masc,TRUE,4,United States,289
+43,3,22,Fem,FALSE,5,United States,150
+43,4,44,Fem,FALSE,6,United States,94
+39,6,44,Masc,FALSE,0,United States,97
+51,5,15.5,Fem,FALSE,2,United States,91
+42,5,57,Fem,FALSE,7,United States,272
+45,9,15.5,Fem,FALSE,6,United States,197
+33,6,44,Masc,FALSE,7,United States,298
+55,7,10,Fem,TRUE,3,United States,124
+44,5,15.5,Fem,FALSE,2,United States,63
+40,5,22,Fem,FALSE,2,United States,127
+41,7,44,Fem,TRUE,2,United States,61
+37,7,102,Fem,FALSE,2,United States,130
+36,5,57,Fem,FALSE,3,United States,132
+44,5,57,Fem,FALSE,6,United States,294
+25,5,22,Masc,FALSE,6,United States,207
+40,6,44,Masc,FALSE,5,United States,244
+44,4,44,Masc,FALSE,2,United States,99
+32,4,15.5,Masc,FALSE,3,United States,96
+41,7,22,Fem,FALSE,10,United States,164
+46,5,44,Fem,FALSE,10,United States,301
+77,5,22,Masc,TRUE,0,United States,265
+48,6,10,Fem,FALSE,5,United States,281
+41,5,44,Masc,FALSE,4,United States,335
+45,5,44,Fem,FALSE,5,United States,223
+41,9,15.5,Fem,FALSE,5,United States,214
+45,6,42,Masc,TRUE,7,United States,309
+42,5,42,Masc,FALSE,1,United States,145
+45,7,44,Masc,TRUE,10,United States,362
+38,4,57,Fem,FALSE,3,United States,76
+40,7,117,Masc,FALSE,3,United States,66
+32,7,57,Fem,FALSE,4,United States,326
+37,6,42,Fem,FALSE,4,United States,294
+31,4,44,Masc,FALSE,3,United States,144
+31,7,44,Fem,FALSE,3,United States,65
+28,9,28,Fem,FALSE,4,United States,173
+37,4,44,Fem,FALSE,10,United States,151
+41,9,57,Masc,FALSE,5,United States,360
+72,4,28,Fem,FALSE,10,United States,148
+33,6,57,Fem,FALSE,5,United States,379
+28,5,15.5,Fem,TRUE,4,United States,133
+47,3,78,Fem,FALSE,5,United States,184
+44,4,102,Fem,FALSE,6,United States,330
+26,6,42,Fem,FALSE,0,United States,111
+44,5,28,Fem,FALSE,2,United States,58
+34,5,57,Masc,FALSE,7,United States,227
+39,9,44,Masc,FALSE,6,United States,172
+42,6,42,Masc,FALSE,7,United States,316
+31,7,44,Masc,TRUE,3,United States,159
+24,5,10,Fem,FALSE,2,United States,107
+32,5,102,Fem,FALSE,2,United States,100
+46,7,10,Masc,TRUE,2,United States,178
+44,7,44,Fem,FALSE,2,United States,134
+47,5,15.5,Masc,FALSE,3,United States,60
+34,5,44,Fem,FALSE,6,United States,201
+50,5,57,Fem,FALSE,6,United States,296
+46,6,15.5,Masc,FALSE,5,United States,205
+44,4,22,Masc,FALSE,2,United States,86
+38,4,57,Masc,FALSE,3,United States,143
+52,7,22,Fem,FALSE,10,United States,311
+48,5,57,Masc,FALSE,10,United States,296
+37,5,22,Fem,TRUE,0,United States,73
+33,6,44,Fem,FALSE,5,United States,230
+38,5,44,Masc,FALSE,4,United States,270
+24,5,15.5,Fem,FALSE,5,United States,234
+32,9,57,Fem,FALSE,5,United States,395
+54,6,15.5,Fem,TRUE,7,United States,187
+38,5,44,Masc,FALSE,1,United States,117
+38,7,10,Fem,TRUE,10,United States,89
+20,4,15.5,Fem,FALSE,3,United States,31
+31,7,22,Fem,FALSE,3,United States,76
+29,7,44,Fem,FALSE,4,United States,146
+38,6,102,Fem,FALSE,4,United States,565
+37,4,57,Fem,FALSE,3,United States,115
+26,7,57,Fem,FALSE,3,United States,116
+45,9,22,Masc,FALSE,4,United States,255
+46,4,44,Masc,FALSE,10,United States,101
+34,9,44,Masc,FALSE,5,United States,205
+40,4,15.5,Masc,FALSE,10,United States,297
+21,6,22,Fem,FALSE,5,United States,112
+29,5,44,Fem,TRUE,4,United States,451
+51,3,22,Masc,FALSE,5,United States,258
+28,4,10,Fem,FALSE,6,United States,264
+36,6,44,Masc,FALSE,0,United States,57
+36,5,44,Fem,FALSE,2,United States,96
+42,5,15.5,Fem,FALSE,7,United States,177
+22,9,42,Masc,FALSE,6,United States,296
+30,6,42,Masc,FALSE,7,United States,213
+26,7,44,Masc,TRUE,3,United States,126
+48,5,57,Fem,FALSE,2,United States,180
+34,5,117,Masc,FALSE,2,United States,198
+50,7,57,Fem,TRUE,2,United States,100
+28,7,42,Fem,FALSE,2,United States,98
+24,5,44,Masc,FALSE,3,United States,110
+28,5,44,Fem,FALSE,6,United States,226
+34,5,28,Fem,FALSE,6,United States,210
+35,6,44,Fem,FALSE,5,United States,189
+38,4,57,Masc,FALSE,2,United States,125
+43,4,28,Fem,FALSE,3,United States,84
+26,7,57,Fem,FALSE,10,United States,217
+54,6,102,Masc,TRUE,4,Indonesia,280
+33,6,15.5,Fem,FALSE,1,Indonesia,34
+27,6,44,Fem,FALSE,7,Indonesia,108
+74,7,42,Masc,FALSE,6,Indonesia,119
+28,3,57,Fem,FALSE,6,Indonesia,82
+24,9,42,Masc,FALSE,3,Indonesia,31
+68,7,22,Fem,TRUE,6,Indonesia,69
+41,4,44,Fem,FALSE,0,Indonesia,33
+52,3,22,Masc,TRUE,5,Indonesia,73
+49,9,102,Masc,FALSE,1,Indonesia,48
+44,13,22,Masc,FALSE,8,Indonesia,67
+51,7,15.5,Fem,FALSE,9,Indonesia,46
+51,5,28,Fem,FALSE,7,Indonesia,42
+42,7,44,Fem,FALSE,2,Indonesia,41
+39,6,15.5,Fem,FALSE,5,Indonesia,47
+38,4,44,Fem,FALSE,4,Indonesia,112
+39,3,57,Fem,FALSE,4,Indonesia,65
+36,2,57,Fem,TRUE,2,Indonesia,53
+39,4,10,Fem,TRUE,9,Indonesia,48
+35,6,44,Fem,FALSE,4,Indonesia,107
+49,5,28,Fem,FALSE,6,Indonesia,94
+29,5,28,Fem,FALSE,8,Indonesia,99
+41,5,44,Fem,FALSE,5,Indonesia,152
+46,5,44,Fem,FALSE,1,Indonesia,57
+31,3,78,Fem,TRUE,10,Indonesia,173
+38,4,102,Fem,FALSE,4,Indonesia,141
+41,4,57,Fem,FALSE,4,Indonesia,144
+29,5,22,Fem,FALSE,4,Indonesia,75
+48,7,10,Masc,FALSE,0,Indonesia,27
+24,4,15.5,Fem,FALSE,6,Indonesia,56
+42,4,22,Masc,FALSE,4,Indonesia,47
+26,5,102,Fem,FALSE,5,Indonesia,256
+26,3,15.5,Fem,FALSE,4,Indonesia,59
+37,8,10,Masc,TRUE,4,Indonesia,57
+22,5,42,Fem,TRUE,7,Indonesia,116
+40,14,22,Masc,FALSE,7,Indonesia,101
+39,5,22,Fem,FALSE,6,Indonesia,96
+59,12,44,Fem,TRUE,3,Indonesia,52
+33,5,15.5,Masc,FALSE,4,Indonesia,56
+30,7,22,Masc,FALSE,6,Indonesia,99
+29,6,15.5,Masc,TRUE,4,Indonesia,74
+42,6,22,Fem,FALSE,1,Indonesia,30
+43,6,10,Fem,FALSE,7,Indonesia,64
+35,7,57,Fem,FALSE,6,Indonesia,144
+27,3,28,Fem,FALSE,6,Indonesia,115
+53,9,44,Fem,FALSE,3,Indonesia,34
+27,7,42,Fem,TRUE,6,Indonesia,116
+26,4,44,Fem,FALSE,0,Indonesia,48
+47,3,15.5,Fem,TRUE,5,Indonesia,58
+23,9,15.5,Fem,FALSE,1,Indonesia,34
+42,13,102,Fem,FALSE,8,Indonesia,120
+43,7,10,Fem,FALSE,9,Indonesia,75
+36,5,78,Fem,FALSE,7,Indonesia,214
+52,7,42,Fem,FALSE,2,Indonesia,33
+33,6,22,Fem,FALSE,5,Indonesia,99
+51,4,15.5,Fem,FALSE,4,Indonesia,64
+19,3,15.5,Fem,FALSE,4,Indonesia,52
+30,2,10,Fem,TRUE,2,Indonesia,17
+29,4,57,Masc,TRUE,9,Indonesia,142
+47,6,102,Fem,FALSE,4,Indonesia,119
+46,5,102,Masc,FALSE,6,Indonesia,143
+35,5,15.5,Fem,FALSE,8,Indonesia,50
+28,5,44,Fem,FALSE,5,Indonesia,97
+41,5,42,Masc,FALSE,1,Indonesia,46
+41,3,57,Fem,TRUE,10,Indonesia,122
+32,4,42,Masc,FALSE,4,Indonesia,114
+33,4,22,Fem,FALSE,4,Indonesia,111
+35,5,44,Fem,FALSE,4,Indonesia,60
+40,7,22,Masc,FALSE,0,Indonesia,27
+35,4,102,Masc,FALSE,6,Indonesia,195
+27,4,22,Masc,FALSE,4,Indonesia,90
+29,5,15.5,Fem,FALSE,5,Indonesia,67
+27,3,28,Fem,FALSE,4,Indonesia,75
+22,8,44,Fem,TRUE,4,Indonesia,81
+41,5,15.5,Fem,TRUE,7,Indonesia,54
+41,14,44,Fem,FALSE,7,Indonesia,175
+34,5,57,Fem,FALSE,6,Indonesia,147
+40,12,57,Fem,TRUE,3,Indonesia,54
+37,5,10,Fem,FALSE,4,Indonesia,69
+33,7,44,Fem,FALSE,6,Indonesia,65
+39,6,28,Fem,TRUE,4,Indonesia,71
+37,6,28,Fem,FALSE,1,Indonesia,26
+52,6,44,Fem,FALSE,7,Indonesia,127
+28,7,44,Fem,FALSE,6,Indonesia,92
+33,3,78,Fem,FALSE,6,Indonesia,142
+40,9,102,Fem,FALSE,3,Indonesia,98
+32,7,57,Fem,TRUE,6,Indonesia,118
+43,4,22,Fem,FALSE,0,Indonesia,43
+40,3,10,Masc,TRUE,5,Indonesia,67
+32,9,15.5,Fem,FALSE,1,Indonesia,31
+32,13,22,Masc,FALSE,8,Indonesia,83
+45,7,102,Fem,FALSE,9,Indonesia,179
+32,5,15.5,Fem,FALSE,7,Indonesia,46
+39,7,10,Masc,FALSE,2,Indonesia,23
+48,6,42,Fem,FALSE,5,Indonesia,100
+42,4,22,Masc,FALSE,4,Indonesia,75
+45,3,22,Fem,FALSE,4,Indonesia,86
+38,2,44,Fem,TRUE,2,Indonesia,37
+38,4,15.5,Masc,TRUE,9,Indonesia,88
+53,6,22,Masc,FALSE,4,Indonesia,65
+38,5,15.5,Masc,FALSE,6,Indonesia,92
+37,5,22,Fem,FALSE,8,Indonesia,62
+29,5,10,Fem,FALSE,5,Indonesia,64
+35,5,57,Fem,FALSE,1,Indonesia,64
+34,3,28,Fem,TRUE,10,Indonesia,95
+25,4,44,Fem,FALSE,4,Indonesia,122
+41,4,42,Fem,FALSE,4,Indonesia,91
+22,5,44,Fem,FALSE,4,Indonesia,38
+45,7,15.5,Fem,FALSE,0,Indonesia,27
+45,4,15.5,Fem,FALSE,6,Indonesia,36
+36,4,102,Fem,FALSE,4,Indonesia,178
+33,5,10,Fem,FALSE,5,Indonesia,17
+53,3,78,Fem,FALSE,4,Indonesia,147
+46,8,42,Fem,TRUE,4,Indonesia,109
+42,5,22,Fem,TRUE,7,Indonesia,58
+25,14,15.5,Fem,FALSE,7,Indonesia,51
+33,5,15.5,Fem,FALSE,6,Indonesia,24
+37,12,10,Fem,TRUE,3,Indonesia,27
+47,5,57,Masc,FALSE,4,Indonesia,38
+44,7,102,Fem,FALSE,6,Indonesia,183
+22,6,102,Masc,TRUE,4,Indonesia,219
+32,6,15.5,Fem,FALSE,1,Indonesia,22
+30,6,44,Fem,FALSE,7,Indonesia,94
+38,7,42,Masc,FALSE,6,Indonesia,97
+48,3,57,Fem,FALSE,6,Indonesia,143
+28,9,42,Masc,FALSE,3,Indonesia,44
+38,7,22,Fem,TRUE,6,Indonesia,94
+35,4,44,Fem,FALSE,0,Indonesia,12
+37,3,22,Masc,TRUE,5,Indonesia,54
+36,9,102,Masc,FALSE,1,Indonesia,80
+27,13,22,Masc,FALSE,8,Indonesia,81
+36,7,15.5,Fem,FALSE,9,Indonesia,83
+36,5,28,Fem,FALSE,7,Indonesia,84
+34,7,44,Fem,FALSE,2,Indonesia,54
+30,6,15.5,Fem,FALSE,5,Indonesia,28
+69,4,44,Fem,FALSE,4,Indonesia,119
+36,3,57,Fem,FALSE,4,Indonesia,47
+37,2,57,Fem,TRUE,2,Indonesia,46
+42,4,10,Fem,TRUE,9,Indonesia,52
+36,6,44,Fem,FALSE,4,Indonesia,73
+47,5,28,Fem,FALSE,6,Indonesia,78
+48,5,28,Fem,FALSE,8,Indonesia,66
+54,5,44,Fem,FALSE,5,Indonesia,115
+69,5,44,Fem,FALSE,1,Indonesia,24
+30,3,78,Fem,TRUE,10,Indonesia,141
+25,4,102,Fem,FALSE,4,Indonesia,245
+25,4,57,Fem,FALSE,4,Indonesia,129
+39,5,22,Fem,FALSE,4,Indonesia,98
+46,7,10,Masc,FALSE,0,Indonesia,19
+38,4,15.5,Fem,FALSE,6,Indonesia,90
+47,4,22,Masc,FALSE,4,Indonesia,94
+37,5,102,Fem,FALSE,5,Indonesia,250
+34,3,15.5,Fem,FALSE,4,Indonesia,87
+34,8,10,Masc,TRUE,4,Indonesia,53
+36,5,42,Fem,TRUE,7,Indonesia,99
+19,14,22,Masc,FALSE,7,Indonesia,53
+38,5,22,Fem,FALSE,6,Indonesia,77
+68,12,44,Fem,TRUE,3,Indonesia,41
+26,5,15.5,Masc,FALSE,4,Indonesia,33
+43,7,22,Masc,FALSE,6,Indonesia,81
+43,6,15.5,Masc,TRUE,4,Indonesia,93
+43,6,22,Fem,FALSE,1,Indonesia,24
+47,6,10,Fem,FALSE,7,Indonesia,49
+51,7,57,Fem,FALSE,6,Indonesia,100
+41,3,28,Fem,FALSE,6,Indonesia,123
+24,9,44,Fem,FALSE,3,Indonesia,59
+26,7,42,Fem,TRUE,6,Indonesia,98
+36,4,44,Fem,FALSE,0,Indonesia,41
+38,3,15.5,Fem,TRUE,5,Indonesia,76
+34,9,15.5,Fem,FALSE,1,Indonesia,39
+23,13,102,Fem,FALSE,8,Indonesia,192
+32,7,10,Fem,FALSE,9,Indonesia,50
+18,5,78,Fem,FALSE,7,Indonesia,159
+26,7,42,Fem,FALSE,2,Indonesia,46
+44,6,22,Fem,FALSE,5,Indonesia,74
+33,4,15.5,Fem,FALSE,4,Indonesia,78
+47,3,15.5,Fem,FALSE,4,Indonesia,86
+33,2,10,Fem,TRUE,2,Indonesia,24
+31,4,57,Masc,TRUE,9,Indonesia,100
+43,6,102,Fem,FALSE,4,Indonesia,228
+35,5,102,Masc,FALSE,6,Indonesia,183
+45,5,15.5,Fem,FALSE,8,Indonesia,62
+25,5,44,Fem,FALSE,5,Indonesia,107
+42,5,42,Masc,FALSE,1,Indonesia,16
+26,3,57,Fem,TRUE,10,Indonesia,39
+21,4,42,Masc,FALSE,4,Indonesia,93
+41,4,22,Fem,FALSE,4,Indonesia,34
+38,5,44,Fem,FALSE,4,Indonesia,73
+32,7,22,Masc,FALSE,0,Indonesia,28
+36,4,102,Masc,FALSE,6,Indonesia,210
+40,4,22,Masc,FALSE,4,Indonesia,48
+27,5,15.5,Fem,FALSE,5,Indonesia,41
+35,3,28,Fem,FALSE,4,Indonesia,66
+55,8,44,Fem,TRUE,4,Indonesia,151
+25,5,15.5,Fem,TRUE,7,Indonesia,38
+45,14,44,Fem,FALSE,7,Indonesia,119
+29,5,57,Fem,FALSE,6,Indonesia,93
+21,12,57,Fem,TRUE,3,Indonesia,63
+26,5,10,Fem,FALSE,4,Indonesia,30
+29,7,44,Fem,FALSE,6,Indonesia,143
+47,10,10,Masc,FALSE,2,Brazil,45
+26,10,44,Fem,TRUE,6,Brazil,116
+44,2,28,Masc,TRUE,3,Brazil,46
+29,7,57,Fem,TRUE,2,Brazil,76
+52,8,15.5,Masc,TRUE,6,Brazil,162
+42,5,15.5,Fem,TRUE,4,Brazil,74
+34,3,15.5,Fem,FALSE,5,Brazil,110
+48,6,42,Fem,FALSE,4,Brazil,135
+31,3,15.5,Fem,FALSE,0,Brazil,52
+49,6,15.5,Masc,FALSE,2,Brazil,50
+44,6,15.5,Fem,TRUE,6,Brazil,111
+38,13,42,Masc,FALSE,6,Brazil,165
+35,6,44,Masc,FALSE,3,Brazil,87
+25,6,28,Fem,FALSE,10,Brazil,133
+35,6,42,Fem,FALSE,3,Brazil,54
+45,13,22,Masc,FALSE,3,Brazil,46
+30,8,28,Fem,TRUE,7,Brazil,103
+33,4,57,Fem,FALSE,9,Brazil,201
+46,5,42,Fem,FALSE,5,Brazil,183
+28,7,44,Fem,FALSE,3,Brazil,45
+47,7,22,Fem,FALSE,8,Brazil,158
+20,4,28,Masc,FALSE,6,Brazil,179
+19,6,10,Fem,FALSE,6,Brazil,93
+34,7,42,Masc,TRUE,3,Brazil,46
+48,9,57,Fem,FALSE,3,Brazil,59
+28,6,15.5,Fem,FALSE,2,Brazil,43
+26,6,42,Masc,FALSE,6,Brazil,157
+27,8,22,Fem,TRUE,2,Brazil,57
+39,6,15.5,Fem,TRUE,3,Brazil,36
+21,6,78,Fem,TRUE,5,Brazil,282
+34,4,44,Masc,FALSE,8,Brazil,21
+26,13,44,Fem,FALSE,0,Brazil,59
+30,4,57,Masc,FALSE,3,Brazil,69
+59,5,44,Fem,FALSE,5,Brazil,112
+21,5,10,Masc,TRUE,8,Brazil,118
+39,9,117,Fem,FALSE,4,Brazil,246
+25,7,44,Fem,FALSE,3,Brazil,49
+42,3,28,Fem,TRUE,3,Brazil,31
+44,6,117,Fem,FALSE,2,Brazil,83
+39,4,15.5,Masc,TRUE,4,Brazil,89
+39,10,78,Fem,FALSE,2,Brazil,98
+56,10,28,Masc,TRUE,6,Brazil,148
+54,2,44,Masc,TRUE,3,Brazil,36
+38,7,102,Fem,TRUE,2,Brazil,130
+35,8,57,Fem,TRUE,6,Brazil,75
+39,5,44,Masc,TRUE,4,Brazil,208
+37,3,57,Fem,FALSE,5,Brazil,172
+22,6,22,Fem,FALSE,4,Brazil,109
+49,3,22,Fem,FALSE,0,Brazil,56
+32,6,57,Fem,FALSE,2,Brazil,70
+38,6,10,Fem,TRUE,6,Brazil,94
+42,13,117,Masc,FALSE,6,Brazil,244
+30,6,15.5,Fem,FALSE,3,Brazil,31
+34,6,44,Masc,FALSE,10,Brazil,32
+40,6,22,Fem,FALSE,3,Brazil,44
+43,13,15.5,Fem,FALSE,3,Brazil,59
+39,8,28,Masc,TRUE,7,Brazil,186
+38,4,22,Fem,FALSE,9,Brazil,176
+37,5,44,Fem,FALSE,5,Brazil,164
+47,7,22,Fem,FALSE,3,Brazil,46
+65,7,10,Masc,FALSE,8,Brazil,111
+28,4,44,Fem,FALSE,6,Brazil,125
+42,6,28,Masc,FALSE,6,Brazil,149
+38,7,57,Fem,TRUE,3,Brazil,36
+40,9,15.5,Masc,FALSE,3,Brazil,65
+31,6,15.5,Fem,FALSE,2,Brazil,34
+36,6,15.5,Fem,FALSE,6,Brazil,79
+30,8,42,Fem,TRUE,2,Brazil,67
+45,6,15.5,Fem,TRUE,3,Brazil,60
+36,6,15.5,Masc,TRUE,5,Brazil,110
+48,4,15.5,Fem,FALSE,8,Brazil,110
+34,13,42,Masc,FALSE,0,Brazil,45
+43,4,44,Masc,FALSE,3,Brazil,36
+32,5,28,Fem,FALSE,5,Brazil,173
+47,5,42,Fem,TRUE,8,Brazil,160
+38,9,22,Masc,FALSE,4,Brazil,93
+32,7,28,Fem,FALSE,3,Brazil,45
+38,3,57,Fem,TRUE,3,Brazil,75
+45,6,42,Fem,FALSE,2,Brazil,37
+30,4,44,Fem,TRUE,4,Brazil,199
+32,10,22,Fem,FALSE,2,Brazil,36
+38,10,28,Masc,TRUE,6,Brazil,117
+76,2,10,Fem,TRUE,3,Brazil,50
+35,7,42,Masc,TRUE,2,Brazil,75
+45,8,57,Fem,TRUE,6,Brazil,198
+40,5,15.5,Fem,TRUE,4,Brazil,72
+25,3,42,Masc,FALSE,5,Brazil,140
+41,6,22,Fem,FALSE,4,Brazil,125
+58,3,15.5,Fem,FALSE,0,Brazil,56
+29,6,78,Fem,FALSE,2,Brazil,70
+46,6,44,Masc,TRUE,6,Brazil,50
+40,13,44,Fem,FALSE,6,Brazil,78
+26,6,57,Masc,FALSE,3,Brazil,86
+45,6,44,Fem,FALSE,10,Brazil,183
+41,6,10,Masc,FALSE,3,Brazil,41
+35,13,117,Fem,FALSE,3,Brazil,114
+32,8,44,Fem,TRUE,7,Brazil,247
+22,4,28,Fem,FALSE,9,Brazil,136
+21,5,117,Fem,FALSE,5,Brazil,244
+35,7,15.5,Masc,FALSE,3,Brazil,64
+41,7,78,Fem,FALSE,8,Brazil,188
+24,4,28,Masc,FALSE,6,Brazil,140
+35,6,44,Masc,FALSE,6,Brazil,162
+47,7,102,Fem,TRUE,3,Brazil,80
+36,9,57,Fem,FALSE,3,Brazil,77
+58,6,44,Masc,FALSE,2,Brazil,7
+46,6,57,Fem,FALSE,6,Brazil,92
+43,8,22,Fem,TRUE,2,Brazil,49
+29,6,22,Fem,TRUE,3,Brazil,45
+31,6,57,Fem,TRUE,5,Brazil,206
+45,4,10,Fem,FALSE,8,Brazil,106
+33,13,117,Masc,FALSE,0,Brazil,131
+35,4,15.5,Fem,FALSE,3,Brazil,39
+46,5,44,Masc,FALSE,5,Brazil,168
+41,5,22,Fem,TRUE,8,Brazil,122
+24,9,15.5,Fem,FALSE,4,Brazil,92
+43,7,28,Masc,FALSE,3,Brazil,64
+22,3,22,Fem,TRUE,3,Brazil,53
+41,6,44,Fem,FALSE,2,Brazil,54
+30,4,22,Fem,TRUE,4,Brazil,130
+46,10,10,Masc,FALSE,2,Brazil,51
+41,10,44,Fem,TRUE,6,Brazil,122
+45,2,28,Masc,TRUE,3,Brazil,46
+37,7,57,Fem,TRUE,2,Brazil,84
+47,8,15.5,Masc,TRUE,6,Brazil,86
+34,5,15.5,Fem,TRUE,4,Brazil,94
+38,3,15.5,Fem,FALSE,5,Brazil,77
+28,6,42,Fem,FALSE,4,Brazil,119
+39,3,15.5,Fem,FALSE,0,Brazil,37
+31,6,15.5,Masc,FALSE,2,Brazil,56
+40,6,15.5,Fem,TRUE,6,Brazil,168
+48,13,42,Masc,FALSE,6,Brazil,231
+33,6,44,Masc,FALSE,3,Brazil,72
+39,6,28,Fem,FALSE,10,Brazil,178
+29,6,42,Fem,FALSE,3,Brazil,57
+38,13,22,Masc,FALSE,3,Brazil,41
+32,8,28,Fem,TRUE,7,Brazil,91
+47,4,57,Fem,FALSE,9,Brazil,116
+40,5,42,Fem,FALSE,5,Brazil,162
+33,7,44,Fem,FALSE,3,Brazil,61
+44,7,22,Fem,FALSE,8,Brazil,130
+43,4,28,Masc,FALSE,6,Brazil,78
+32,6,10,Fem,FALSE,6,Brazil,56
+35,7,42,Masc,TRUE,3,Brazil,73
+38,9,57,Fem,FALSE,3,Brazil,71
+28,6,15.5,Fem,FALSE,2,Brazil,33
+33,6,42,Masc,FALSE,6,Brazil,196
+26,8,22,Fem,TRUE,2,Brazil,49
+41,6,15.5,Fem,TRUE,3,Brazil,43
+32,6,78,Fem,TRUE,5,Brazil,162
+36,4,44,Masc,FALSE,8,Brazil,168
+34,13,44,Fem,FALSE,0,Brazil,58
+23,4,57,Masc,FALSE,3,Brazil,77
+40,5,44,Fem,FALSE,5,Brazil,126
+31,5,10,Masc,TRUE,8,Brazil,42
+20,9,117,Fem,FALSE,4,Brazil,289
+33,7,44,Fem,FALSE,3,Brazil,69
+32,3,28,Fem,TRUE,3,Brazil,38
+27,6,117,Fem,FALSE,2,Brazil,96
+36,4,15.5,Masc,TRUE,4,Brazil,111
+42,10,78,Fem,FALSE,2,Brazil,78
+31,10,28,Masc,TRUE,6,Brazil,184
+39,2,44,Masc,TRUE,3,Brazil,66
+40,7,102,Fem,TRUE,2,Brazil,128
+43,8,57,Fem,TRUE,6,Brazil,165
+52,5,44,Masc,TRUE,4,Brazil,246
+45,3,57,Fem,FALSE,5,Brazil,204
+40,6,22,Fem,FALSE,4,Brazil,94
+50,3,22,Fem,FALSE,0,Brazil,52
+47,6,57,Fem,FALSE,2,Brazil,70
+42,6,10,Fem,TRUE,6,Brazil,81
+31,13,117,Masc,FALSE,6,Brazil,330
+37,6,15.5,Fem,FALSE,3,Brazil,45
+48,6,44,Masc,FALSE,10,Brazil,139
+44,6,22,Fem,FALSE,3,Brazil,24
+22,13,15.5,Fem,FALSE,3,Brazil,73
+34,8,28,Masc,TRUE,7,Brazil,67
+49,4,22,Fem,FALSE,9,Brazil,123
+50,5,44,Fem,FALSE,5,Brazil,150
+33,7,22,Fem,FALSE,3,Brazil,69
+34,7,10,Masc,FALSE,8,Brazil,93
+29,4,44,Fem,FALSE,6,Brazil,134
+45,6,28,Masc,FALSE,6,Brazil,85
+26,7,57,Fem,TRUE,3,Brazil,89
+34,9,15.5,Masc,FALSE,3,Brazil,42
+27,6,15.5,Fem,FALSE,2,Brazil,28
+18,6,15.5,Fem,FALSE,6,Brazil,121
+32,8,42,Fem,TRUE,2,Brazil,54
+37,6,15.5,Fem,TRUE,3,Brazil,41
+37,6,15.5,Masc,TRUE,5,Brazil,117
+30,4,15.5,Fem,FALSE,8,Brazil,145
+53,13,42,Masc,FALSE,0,Brazil,69
+68,4,44,Masc,FALSE,3,Brazil,68
+39,5,28,Fem,FALSE,5,Brazil,122
+37,5,42,Fem,TRUE,8,Brazil,236
+43,9,22,Masc,FALSE,4,Brazil,107
+25,7,28,Fem,FALSE,3,Brazil,35
+31,3,57,Fem,TRUE,3,Brazil,84
+39,6,42,Fem,FALSE,2,Brazil,94
+29,4,44,Fem,TRUE,4,Brazil,161
+31,8,15.5,Masc,TRUE,0,Pakistan,19
+39,3,42,Fem,TRUE,5,Pakistan,101
+18,7,15.5,Fem,TRUE,5,Pakistan,26
+39,6,22,Fem,FALSE,8,Pakistan,23
+23,3,15.5,Fem,FALSE,3,Pakistan,27
+39,8,57,Masc,FALSE,1,Pakistan,48
+40,3,44,Masc,FALSE,5,Pakistan,93
+48,8,44,Masc,FALSE,4,Pakistan,70
+40,2,42,Fem,FALSE,2,Pakistan,40
+58,6,22,Fem,FALSE,2,Pakistan,28
+26,4,78,Fem,FALSE,9,Pakistan,193
