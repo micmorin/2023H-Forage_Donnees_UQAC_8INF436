@@ -1,9 +1,9 @@
+from sys import stdout
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.model_selection import train_test_split, KFold, GridSearchCV
 from sklearn.metrics import accuracy_score, f1_score, recall_score, classification_report, confusion_matrix
-from river.tree import ExtremelyFastDecisionTreeClassifier
-from river import model_selection, metrics, utils
+from skmultiflow.trees import ExtremelyFastDecisionTreeClassifier
 
 import time
 import pandas as pd
@@ -15,29 +15,34 @@ def classificationEnTroisModele(donnees, verbose):
   X = donnees.drop('class_revenue', axis=1)
   y = donnees['class_revenue']
 
+  X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
   if verbose > 1:
     print("\033[32mRandom forest\033[0m")
 
-  if not isfile('randomForestModel.pkl'):
-    randomForestModel = randomForest(X, y, verbose)
-    pickle.dump(randomForestModel, open('randomForestModel.pkl', 'wb'))
+  if not isfile('./Classification/randomForestModel.pkl'):
+    randomForestModel = randomForest(X_train, y_train, verbose)
+    pickle.dump(randomForestModel, open('./Classification/randomForestModel.pkl', 'wb'))
   else:
-    randomForestModel = pickle.load(open('./randomForestModel.pkl', 'rb'))
+    randomForestModel = pickle.load(open('./Classification/randomForestModel.pkl', 'rb'))
 
   if verbose > 1:
     print("\033[32mDecision Tree\033[0m")
   
-  if not isfile('decisionTreeModel.pkl'):
-    decisionTreeModel = DecisionTree(X, y, verbose)
-    pickle.dump(decisionTreeModel, open('decisionTreeModel.pkl', 'wb'))
+  if not isfile('./Classification/decisionTreeModel.pkl'):
+    decisionTreeModel = DecisionTree(X_train, y_train, verbose)
+    pickle.dump(decisionTreeModel, open('./Classification/decisionTreeModel.pkl', 'wb'))
   else:
-    decisionTreeModel = pickle.load(open('./decisionTreeModel.pkl', 'rb'))
+    decisionTreeModel = pickle.load(open('./Classification/decisionTreeModel.pkl', 'rb'))
 
   if verbose > 1:
     print("\033[32mExtremely Fast Decision Tree\033[0m")
 
-  extremelyFastDecisionTreeModel = extremelyFastDecisionTree(X, y, verbose)
-
+  if not isfile('./Classification/extremelyFastDecisionTreeModel.pkl'):
+    extremelyFastDecisionTreeModel = extremelyFastDecisionTree(X_train, y_train, 5, verbose)
+    pickle.dump(decisionTreeModel, open('./Classification/extremelyFastDecisionTreeModel.pkl', 'wb'))
+  else:
+    extremelyFastDecisionTreeModel = pickle.load(open('./Classification/extremelyFastDecisionTreeModel.pkl', 'rb')) 
 
   return randomForestModel, decisionTreeModel, extremelyFastDecisionTreeModel
 
@@ -140,29 +145,21 @@ def DecisionTree(dataX, dataY, verbose = 0):
   return dt
 
 #Fonction pour le troisième modèle, Extremely Fast Decision Tree
-def extremelyFastDecisionTree(dataX, dataY, verbose = 0):
-  X_train, X_test, y_train, y_test = train_test_split(dataX, dataY, test_size=0.2, random_state=42)
+def extremelyFastDecisionTree(dataX, dataY, k, verbose = 0):
 
-  #On crée le premier modèle de classification
-  model = ExtremelyFastDecisionTreeClassifier()
+  edtf = ExtremelyFastDecisionTreeClassifier()
 
-  models = utils.expand_param_grid(model, {
-    'grace_period': [150, 200, 250],
-    'min_samples_reevaluate':[15,20,25],
-    'split_criterion':['gini', 'info_gain', 'hellinger']
-  })
+  print ("Valisation Croisee")
+  #recherche de la meilleur coupe train/test
+  search = validationCroisee(dataX, dataY, k, edtf, verbose)
 
-  sh = model_selection.SuccessiveHalvingClassifier(
-     models,
-     metric=metrics.Accuracy(),
-     budget=2000,
-     eta=2,
-     verbose=True )
+  if verbose > 0:
+    print(pd.DataFrame(search["scores"]))
 
-  return sh.best_model
+  return edtf
 
 #Fonction pour faire la validation Croisée des données
-def validationCroisee(dataX, dataY, k, dt):
+def validationCroisee(dataX, dataY, k, dt, verbose):
   kf = KFold(n_splits=k)
 
   #Tableau des différents résultats
@@ -175,11 +172,12 @@ def validationCroisee(dataX, dataY, k, dt):
 
   i=0
   for train_index, test_index in kf.split(dataX):
-    # Séparation des données en ensembles d'entraînement et de test
+    stdout.write("Verifying folds ... " + str(i/5*100) + '%\r')
+    stdout.flush()
+
     X_train, X_test = dataX.iloc[train_index].values, dataX.iloc[test_index].values
     y_train, y_test = dataY.iloc[train_index].values, dataY.iloc[test_index].values
     
-    # Entraînement du modèle sur l'ensemble d'entraînement
     start_time = time.time()
     dt.partial_fit(X_train, y_train)
     elapsedTime = time.time() - start_time #Le temps pris pour l'entrainement

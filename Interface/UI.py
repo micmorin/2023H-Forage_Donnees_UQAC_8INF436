@@ -1,7 +1,7 @@
 from flask import Flask, request, render_template, url_for,redirect, flash
 from sklearn.metrics import accuracy_score, brier_score_loss, f1_score, recall_score
 from sklearn.model_selection import train_test_split
-from river import metrics
+from river import metrics, stream
 import numpy as np
 
 def interfaceUtilisateur(modele1, modele2, modele3, donnees, verbose):
@@ -48,16 +48,16 @@ def getMetrics(models, x_test, y_test):
                 elif i == 2: result[i].append(round(brier_score_loss(y_test, np.amax(m.predict_proba(x_test), axis=1))*100,2))
                 elif i == 3: result[i].append(round(f1_score(y_test, m.predict(x_test))*100,2))
                 elif i == 4: result[i].append(round(recall_score(y_test, m.predict(x_test))*100,2))
-                else: result[i].append(111)
+                else: result[i].append(111)               
             except:
                 try:
-                    if i == 1:   result[i].append(metrics.Accuracy().get())
-                    elif i == 2: result[i].append(0.0)
-                    elif i == 3: result[i].append(metrics.F1().get())
-                    elif i == 4: result[i].append(metrics.Recall().get())
-                    else: result[i].append(111)
+                    if i == 1:   result[i].append(round(accuracy_score(y_test.to_numpy(), m.predict(x_test.to_numpy()))*100,2))
+                    elif i == 2: result[i].append(round(brier_score_loss(y_test.to_numpy(), np.amax(m.predict_proba(x_test.to_numpy()), axis=1))*100,2))
+                    elif i == 3: result[i].append(round(f1_score(y_test.to_numpy(), m.predict(x_test.to_numpy()))*100,2))
+                    elif i == 4: result[i].append(round(recall_score(y_test.to_numpy(), m.predict(x_test.to_numpy()))*100,2))
+                    else: result[i].append(111) 
                 except Exception as e:
-                    print(e)
+                    print(e)              
                     result[i].append(0)
 
     return result
