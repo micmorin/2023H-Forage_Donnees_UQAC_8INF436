@@ -40,7 +40,7 @@ def classificationEnTroisModele(donnees, verbose):
 
   if not isfile('./Classification/extremelyFastDecisionTreeModel.pkl'):
     extremelyFastDecisionTreeModel = extremelyFastDecisionTree(X_train, y_train, 5, verbose)
-    pickle.dump(decisionTreeModel, open('./Classification/extremelyFastDecisionTreeModel.pkl', 'wb'))
+    pickle.dump(extremelyFastDecisionTreeModel, open('./Classification/extremelyFastDecisionTreeModel.pkl', 'wb'))
   else:
     extremelyFastDecisionTreeModel = pickle.load(open('./Classification/extremelyFastDecisionTreeModel.pkl', 'rb')) 
 
