@@ -1,12 +1,15 @@
+from os import path
 from flask import Flask, request, render_template, url_for,redirect, flash
 from sklearn.metrics import accuracy_score, brier_score_loss, f1_score, recall_score
 from sklearn.model_selection import train_test_split
-from river import metrics, stream
+
 import numpy as np
+import pandas as pd
 
 def interfaceUtilisateur(modele1, modele2, modele3, donnees, verbose):
   # Begin Flask App
     app = Flask(__name__)
+    app.secret_key = b'_5#y2L"F4Q8z\n\xec]/'
 
     x_train, x_test, y_train, y_test = train_test_split(donnees.iloc[:,:-1], donnees.iloc[:,-1:], test_size=0.25)
 
@@ -17,9 +20,23 @@ def interfaceUtilisateur(modele1, modele2, modele3, donnees, verbose):
         if request.method == 'GET': 
             return render_template('index.html')
         
-        # If POST, the team is selected so redirect to level 1
+        # If POST, 
         else:
-            return redirect(url_for('metrics'))
+            try:
+                uploaded_file = request.files['files']
+                if uploaded_file.filename != '':
+                    if path.splitext(uploaded_file.filename)[1] not in ['.csv']:
+                        flash("Nous n'acceptons que les fichiers .csv")
+                        return redirect(url_for('index'))
+                    else:
+                        return render_template('index.html')
+                else:
+                    flash("Vous devez choisir un fichier avant de televerser")
+                    return redirect(url_for('index'))
+            except Exception as e:
+                print(e)
+                return render_template('index.html')
+            
 
     # Metrics.html
     @app.route("/metrics", methods=['GET'])        
@@ -32,9 +49,12 @@ def interfaceUtilisateur(modele1, modele2, modele3, donnees, verbose):
 
 def getMetrics(models, x_test, y_test):
     result = [[]]
+
+    # Headers as model names
     for m in models:
         result[0].append(type(m).__name__)
 
+    # Measure header at row level
     for i in range(1,5):
         if i == 1:   result.append(["Accuracy"])
         elif i == 2: result.append(["Brier Loss"])
@@ -42,6 +62,7 @@ def getMetrics(models, x_test, y_test):
         elif i == 4: result.append(["Recall"])
         else: result.append([""])
 
+        # Get metric for each model
         for m in models:
             try:
                 if i == 1:   result[i].append(round(accuracy_score(y_test, m.predict(x_test))*100,2))
@@ -50,7 +71,8 @@ def getMetrics(models, x_test, y_test):
                 elif i == 4: result[i].append(round(recall_score(y_test, m.predict(x_test))*100,2))
                 else: result[i].append(111)               
             except:
-                try:
+                # For extremelyFastDecisionTree
+                try: 
                     if i == 1:   result[i].append(round(accuracy_score(y_test.to_numpy(), m.predict(x_test.to_numpy()))*100,2))
                     elif i == 2: result[i].append(round(brier_score_loss(y_test.to_numpy(), np.amax(m.predict_proba(x_test.to_numpy()), axis=1))*100,2))
                     elif i == 3: result[i].append(round(f1_score(y_test.to_numpy(), m.predict(x_test.to_numpy()))*100,2))
@@ -61,3 +83,7 @@ def getMetrics(models, x_test, y_test):
                     result[i].append(0)
 
     return result
+
+def getResults(file):
+    t = pd.read_csv(file)
+    return t
