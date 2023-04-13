@@ -6,22 +6,15 @@ from sys import stdout
 from sklearn.impute import SimpleImputer
 from sklearn.preprocessing import FunctionTransformer, OneHotEncoder, StandardScaler, LabelEncoder
 
-def preparationDesDonnees(verbose = 0):
+def preparationDesDonnees(donnees, verbose = 0):
 
-  def detect_missing_values_files(file, missing_values):
-    df = pd.read_csv(file, na_values = missing_values)
-    missing_value_counts = df.isnull().sum() 
-    return df, missing_value_counts
-  
-  def func_loc_missing_values(file, missing_values):
-    df, missing_value_counts = detect_missing_values_files(file, missing_values)
-    missing_values_location = df[df.isnull().any(axis=1)].index
+  def func_loc_missing_values(donnees):
+    missing_values_location = donnees[donnees.isnull().any(axis=1)].index
     return missing_values_location
   
-  def missing_values_NaN(customer_clean, missing_values):
-    customer_clean = pd.DataFrame(customer_clean)
-    customer_clean.replace(to_replace=missing_values, value=np.nan, inplace=True)
-    return df
+  def missing_values_NaN(donnees):
+    donnees.replace(to_replace=["NaN", "N/a", "na", "unknown", '?','-', np.nan], value=np.nan, inplace=True)
+    return donnees
   
   def func_change_dtype(df, colonnes, dtype= float):
     df[colonnes] = df[colonnes].apply(pd.to_numeric, errors = 'coerce')
@@ -41,56 +34,44 @@ def preparationDesDonnees(verbose = 0):
   def revenue_bin(dataset):
     moy_rev = dataset["revenue"].mean()
     dataset["class_revenue"] = (dataset["revenue"] > moy_rev).astype(int)
-    return dataset.drop("revenue", axis = 1)
-  
-  if verbose > 1: 
-    print("Reading Customer.csv")
-  customer = pd.read_csv("Customer.csv")
+    return dataset.drop("revenue", axis = 1) 
 
   if verbose > 0: 
     print("Examining data\n")
-    customer.head() 
-    customer.info()
-    customer.describe(include = "all")
+    donnees.head() 
+    donnees.info()
+    donnees.describe(include = "all")
 
   if verbose > 1: 
     print("\nVisualizing with Histograms")
-    customer.hist(bins = 50, figsize = (20,15))
+    donnees.hist(bins = 50, figsize = (20,15))
     plt.show()  
-
-  missing_values = ["NaN", "N/a", "na", "unknown", '?','-', np.nan]
-
-  df, missing_value_counts = detect_missing_values_files("Customer.csv", missing_values)
-  if verbose > 1:
-    print("Display missing values")
-    print(df)
 
   if verbose > 1:
     print("Display missing values locations")
-    print(func_loc_missing_values("Customer.csv", missing_values))
+    print(func_loc_missing_values(donnees))
 
-  customer_clean = customer.copy()
-
-  customer_clean = missing_values_NaN(df, missing_values)
+  donnees = missing_values_NaN(donnees)
 
   # Transformateur pour la fonction missing_values_NaN
-  missing_values_transformer = FunctionTransformer(missing_values_NaN, validate=False, kw_args={'missing_values': missing_values})
+  missing_values_transformer = FunctionTransformer(missing_values_NaN, validate=False, kw_args={'missing_values': ["NaN", "N/a", "na", "unknown", '?','-', np.nan]})
   
   # Les missing values ont bien étés remplacés par NaN
-  liste_indexes = [2,5,112,1233,2003,6678,9834]
-  customer_clean.loc[liste_indexes]
+  if verbose > 1:
+    liste_indexes = [2,5,112,1233,2003,6678,9834]
+    donnees.loc[liste_indexes]
 
   # On change le type des variables
   colonnes = ['first_item_prize', 'revenue']
-  customer_clean = func_change_dtype(customer_clean, colonnes) 
+  donnees = func_change_dtype(donnees, colonnes) 
   
   if verbose > 0: 
     print("Verify variables are all numerical")
-    customer_clean.info()
+    donnees.info()
 
   # On sépare les variables numériques des autres variables 
   v_cat = ['gender','country','ReBuy']
-  customer_num = customer_clean.drop(columns=v_cat, axis=1)
+  customer_num = donnees.drop(columns=v_cat, axis=1)
 
   #remplacement des valeurs manquantes pour les variables de type numérique.  
   imputer = SimpleImputer(strategy='median')
@@ -101,7 +82,7 @@ def preparationDesDonnees(verbose = 0):
 
   # Gestion des variables quantitatives
   encoder = OneHotEncoder()
-  v_cat = customer_clean[['gender','country','ReBuy', 'revenue']]
+  v_cat = donnees[['gender','country','ReBuy', 'revenue']]
   v_cat_1hot = encoder.fit_transform(v_cat)
 
   customer_num.median().values

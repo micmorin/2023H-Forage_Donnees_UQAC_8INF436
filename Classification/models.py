@@ -21,7 +21,7 @@ def classificationEnTroisModele(donnees, verbose):
     print("\033[32mRandom forest\033[0m")
 
   if not isfile('./Classification/randomForestModel.pkl'):
-    randomForestModel = randomForest(X_train, y_train, verbose)
+    randomForestModel = randomForest(X_train, y_train, X_test, y_test, verbose)
     pickle.dump(randomForestModel, open('./Classification/randomForestModel.pkl', 'wb'))
   else:
     randomForestModel = pickle.load(open('./Classification/randomForestModel.pkl', 'rb'))
@@ -30,7 +30,7 @@ def classificationEnTroisModele(donnees, verbose):
     print("\033[32mDecision Tree\033[0m")
   
   if not isfile('./Classification/decisionTreeModel.pkl'):
-    decisionTreeModel = DecisionTree(X_train, y_train, verbose)
+    decisionTreeModel = DecisionTree(X_train, y_train, X_test, y_test, verbose)
     pickle.dump(decisionTreeModel, open('./Classification/decisionTreeModel.pkl', 'wb'))
   else:
     decisionTreeModel = pickle.load(open('./Classification/decisionTreeModel.pkl', 'rb'))
@@ -39,7 +39,7 @@ def classificationEnTroisModele(donnees, verbose):
     print("\033[32mExtremely Fast Decision Tree\033[0m")
 
   if not isfile('./Classification/extremelyFastDecisionTreeModel.pkl'):
-    extremelyFastDecisionTreeModel = extremelyFastDecisionTree(X_train, y_train, 5, verbose)
+    extremelyFastDecisionTreeModel = extremelyFastDecisionTree(X_train, y_train, X_test, y_test, 5, verbose)
     pickle.dump(extremelyFastDecisionTreeModel, open('./Classification/extremelyFastDecisionTreeModel.pkl', 'wb'))
   else:
     extremelyFastDecisionTreeModel = pickle.load(open('./Classification/extremelyFastDecisionTreeModel.pkl', 'rb')) 
@@ -48,9 +48,7 @@ def classificationEnTroisModele(donnees, verbose):
 
 
 #Fonction pour le premier modele, random forest
-def randomForest(dataX, dataY, verbose = 0):
-
-  X_train, X_test, y_train, y_test = train_test_split(dataX, dataY, test_size=0.2, random_state=42)
+def randomForest(X_train, y_train, X_test, y_test, verbose = 0):
 
   #On crée le premier modèle de classification
   randomForest = RandomForestClassifier(n_estimators=100, max_depth=2, random_state=0)
@@ -94,9 +92,7 @@ def randomForest(dataX, dataY, verbose = 0):
   return randomForest
 
 #Fonction pour le deuxieme modèle, Decision Tree
-def DecisionTree(dataX, dataY, verbose = 0):
-
-  X_train, X_test, y_train, y_test = train_test_split(dataX, dataY, test_size=0.2, random_state=42)
+def DecisionTree(X_train, y_train, X_test, y_test, verbose = 0):
 
   #On crée le premier modèle de classification
   dt = DecisionTreeClassifier()
@@ -145,13 +141,13 @@ def DecisionTree(dataX, dataY, verbose = 0):
   return dt
 
 #Fonction pour le troisième modèle, Extremely Fast Decision Tree
-def extremelyFastDecisionTree(dataX, dataY, k, verbose = 0):
+def extremelyFastDecisionTree(X_train, y_train, X_test, y_test, k, verbose = 0):
 
   edtf = ExtremelyFastDecisionTreeClassifier()
 
   print ("Valisation Croisee")
   #recherche de la meilleur coupe train/test
-  search = validationCroisee(dataX, dataY, k, edtf, verbose)
+  search = validationCroisee(X_train, y_train, k, edtf, verbose)
 
   if verbose > 0:
     print(pd.DataFrame(search["scores"]))
