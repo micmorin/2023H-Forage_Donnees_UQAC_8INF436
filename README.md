@@ -14,7 +14,7 @@
 5. [Interface Utilisateur](#interface-utlisateur)
 
 ## Introduction
-Pour notre projet, nous avons décidé d'utiliser un dataset provenant d'un site web d'achat en ligne. Après avoir préparé nos données, vous avons choisis de *réduire/sélectionné* les dimensions *XYZ*. Quant au choix des modèles de classification, nous nous sommes arrêté sur 3 classifieurs différents. Nous avons choisis en premier RandomForest car il est rapide et efficace. Ensuite, nous avons choisis EFDT, également rapide et efficace, mais qui permet de faire de la classification en ligne. Enfin, nous avons choisis un arbre de décision classique car il est facile à comprendre et à interpréter. Finalement, notre interface utilisateur a été établie avec le framework Flask puisque l'équipe était familière avec ce dernier, il permet une association rapide avec le reste du projet en python et l'interface web est facilement accessible par tous.
+Pour notre projet, nous avons décidé d'utiliser un dataset provenant d'un site web d'achat en ligne. Après avoir préparé nos données, vous avons choisis de réduire les dimensions à 2. Quant au choix des modèles de classification, nous nous sommes arrêté sur 3 classifieurs différents. Nous avons choisis en premier RandomForest car il est rapide et efficace. Ensuite, nous avons choisis EFDT, également rapide et efficace, mais qui permet de faire de la classification en ligne. Enfin, nous avons choisis un arbre de décision classique car il est facile à comprendre et à interpréter. Finalement, notre interface utilisateur a été établie avec le framework Flask puisque l'équipe était familière avec ce dernier, il permet une association rapide avec le reste du projet en python et l'interface web est facilement accessible par tous.
 
 *Recommendations *
 
@@ -65,3 +65,5 @@ Les métriques utilisées sont :
 - rappel
 
 ## Interface Utilisateur
+Avec Flask, nous avons pu lié facilement la classification à l'interface utilisateur web. Après le chargement des modèles, la route index permet de saisir des données dans une table ou de televerser un fichier pour une classification. Une fois l'un des formulaires soumis, Flask fait appel à la préparation de données et la rédaction de dimensions mentionnées précédemment sur les nouveaux données. Ensuite, la fonction predict est utilisée et placée dans un dataframe de pandas. Finalement,  la fonction to_html de pandas reouten3 la table affichée. 
+Une deuxième route, metrics, est disponible pour visionner les métriques de chaque modèle. Encore une fois, les fonctions de pandas ont été utilisées pour obtenir les résultats et le code html pour l'affichage. 
