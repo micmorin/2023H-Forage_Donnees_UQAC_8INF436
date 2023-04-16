@@ -8,8 +8,21 @@
 <body>  
     <main>
         <div class="row justify-content-center">
+          <h5 style="text-align: center;">Metrics</h5>
           <div class="col-6 col-md-8">
             {{ array|safe }}
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <h5 style="text-align: center;">Confusion Matrix</h5>
+          <div class="col-6 col-md-8">
+            {{ confusionMatrix|safe }}
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <h5 style="text-align: center;">Number of right guessed lines</h5>
+          <div class="col-6 col-md-8">
+            {{ guesses|safe }}
           </div>
         </div>
     </main>

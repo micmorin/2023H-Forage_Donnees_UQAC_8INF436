@@ -1,7 +1,7 @@
 from os import path
 from sys import stdout
 from flask import Flask, request, render_template, url_for,redirect, flash
-from sklearn.metrics import accuracy_score, brier_score_loss, f1_score, recall_score
+from sklearn.metrics import accuracy_score, brier_score_loss, f1_score, recall_score, confusion_matrix
 from sklearn.model_selection import train_test_split
 
 from Dimensions.dimensions import reductionDeDimension
@@ -78,10 +78,12 @@ def interfaceUtilisateur(modele1, modele2, modele3, donnees, verbose):
     def metrics():
         X_train, X_test, y_train, y_test = train_test_split(donnees.drop('class_revenue', axis=1), donnees['class_revenue'], test_size=0.3)
         array = getMetrics([modele1, modele2, modele3], X_test.to_numpy(), y_test.to_numpy())
-        return render_template('metrics.html', array=array)
+        confusionMatrix = getConfusion([modele1, modele2, modele3], X_test.to_numpy(), y_test.to_numpy())
+        guesses = getRightGuesses([modele1, modele2, modele3], X_test.to_numpy(), y_test.to_numpy())
+        return render_template('metrics.html', array=array, confusionMatrix = confusionMatrix, guesses = guesses)
 
     # Begin Flask Server
-    app.run(host='127.0.0.1',port=80)
+    app.run(host='127.0.0.1',port=82)
 
 
 
@@ -94,6 +96,7 @@ def getMetrics(models, x_test, y_test):
     # Headers as model names
     for m in models:
         cols.append(type(m).__name__)
+    cols.append("Votes (Majority)")
 
     # Measure header at row level
     for i in range(4):
@@ -115,10 +118,68 @@ def getMetrics(models, x_test, y_test):
                     elif i == 3: result[i].append(round(recall_score(y_test.to_numpy(), m.predict(x_test.to_numpy()))*100,2))
                     else: result[i].append(111) 
                 except Exception as e:
-                    print(e)              
+                    print(e) 
                     result[i].append(0)
 
-    return pd.DataFrame(result, index=index, columns=cols).to_html(classes='table table-striped table-hover text-center')
+    # Mesute the vote of all models
+    predAll = models[0].predict(x_test) + models[1].predict(x_test) + models[2].predict(x_test)
+    predAll = [1 if x > 1 else 0 for x in predAll]
+
+    # Adding it to the table
+    result[0].append(round(accuracy_score(y_test, predAll)*100,2))
+    result[1].append(round(brier_score_loss(y_test, predAll)*100,2))
+    result[2].append(round(f1_score(y_test, predAll)*100,2))
+    result[3].append(round(recall_score(y_test, predAll)*100,2))
+
+    return pd.DataFrame(result, index=index, columns=cols).to_html(classes='table table-striped table-hover text-center').replace('<tr style="text-align: right;">', '<tr>')
+
+def getConfusion(models, x_test, y_test):
+    result = [[],[],[],[]]
+    cols = []
+    index = ['Vrai Positif','Vrai Négatif','Faux Positif','Faux Négatif']
+
+    # Headers as model names
+    for m in models:
+        cols.append(type(m).__name__)
+    cols.append("Votes (Majority)")
+
+    for m in models:
+        confusionMatrix = confusion_matrix(y_test, m.predict(x_test))
+        result[0].append(confusionMatrix[0][0])
+        result[1].append(confusionMatrix[1][1])
+        result[2].append(confusionMatrix[0][1])
+        result[3].append(confusionMatrix[1][0])
+
+    # Mesute the vote of all models
+    predAll = models[0].predict(x_test) + models[1].predict(x_test) + models[2].predict(x_test)
+    predAll = [1 if x > 1 else 0 for x in predAll]
+
+    # Adding it to the table
+    confusionMatrix = confusion_matrix(y_test, predAll)
+    result[0].append(confusionMatrix[0][0])
+    result[1].append(confusionMatrix[1][1])
+    result[2].append(confusionMatrix[0][1])
+    result[3].append(confusionMatrix[1][0])
+
+    return pd.DataFrame(result, index=index, columns=cols).to_html(classes='table table-striped table-hover text-center').replace('<tr style="text-align: right;">', '<tr>')
+
+
+def getRightGuesses(models, x_test, y_test):
+    result = [[]]
+    cols = ["0 model","1 model","2 models","3 models"]
+    index = ['']
+
+    predAll = models[0].predict(x_test) + models[1].predict(x_test) + models[2].predict(x_test)
+    #revert where it's suppose to be 0
+    predAll = [3-predAll[i] if y_test[i] == 0 else predAll[i] for i in range(len(predAll))]
+    #count the occurences
+    for i in range(4):
+        result[0].append(predAll.count(i))
+
+    df = pd.DataFrame(result, index=index, columns=cols)
+    df.columns.name = 'Guessed right by :'
+    return df.to_html(classes='table table-striped table-hover text-center').replace('<tr style="text-align: right;">', '<tr>')
+
 
 def getResults(df, models):
     if df.shape[0] == 1: 
