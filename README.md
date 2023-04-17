@@ -42,7 +42,8 @@ Nous avons donc fait 3 modeles différents :
 
 Un random forest, optimisé avec une gridSearchCV. Avec train/test comme stratégie de validation. <br>
 Les métriques utilisées sont :
-- Précision
+- Accuracy
+- Brier Loss
 - F1
 - Recall
 
@@ -52,18 +53,44 @@ Grâce à la gridSearchCV, nous avons pu trouver les meilleurs paramètres pour 
 
 Un simple arbre de décision, optimisé avec une gridSearchCV. Avec train/test comme stratégie de validation. <br>
 Les métriques utilisées sont :
-- Précision
+- Accuracy
+- Brier Loss
 - F1
+- Recall
 
 ### Extremely Fast Decision tree
 
 Un extremely Fast Decision Treen avec k-fold comme stratégie de validation.
 Les métriques utilisées sont :
-- Temps
-- F1
 - Accuracy
-- rappel
+- Brier Loss
+- F1
+- Recall
 
 ## Interface Utilisateur
 Avec Flask, nous avons pu lié facilement la classification à l'interface utilisateur web. Après le chargement des modèles, la route index permet de saisir des données dans une table ou de televerser un fichier pour une classification. Une fois l'un des formulaires soumis, Flask fait appel à la préparation de données et la rédaction de dimensions mentionnées précédemment sur les nouveaux données. Ensuite, la fonction predict est utilisée et placée dans un dataframe de pandas. Finalement,  la fonction to_html de pandas reouten3 la table affichée. 
 Une deuxième route, metrics, est disponible pour visionner les métriques de chaque modèle. Encore une fois, les fonctions de pandas ont été utilisées pour obtenir les résultats et le code html pour l'affichage. 
+
+## Analyse des résultats
+
+Les résultats de vos modèles de classification sont présentés sur la page metrics de l'interface utilisateur.
+Pour cette analyse je me suis basé sur les résultats affichés sur l'image ci-dessous car il est probable que les résultats diffèrent à chaque fois que l'on lance l'application: 
+
+![image](result.png)
+
+Les quatre mesures d'évaluation utilisées pour comparer les performances des modèles sont :
+
+L'exactitude (Accuracy) : qui mesure la proportion d'observations correctement classées par rapport à l'ensemble des observations.
+La perte de Brier (Brier Loss) : qui mesure la moyenne de l'erreur quadratique entre les prédictions et les observations réelles.
+Le score F1 (F1 Score) : qui mesure l'harmonique entre la précision et le rappel.
+Le rappel (Recall) : qui mesure la proportion d'observations réellement positives qui ont été correctement identifiées par le modèle.
+
+Sur la base de ces mesures, il semble que le modèle Random Forest soit le meilleur modèle avec une exactitude de 93,77 %, une perte de Brier de 48,99, un score F1 de 92,36 % et un rappel de 93,23 %. Il est suivi par le modèle Decision Tree qui a une exactitude de 82,80 %, une perte de Brier de 48,80, un score F1 de 77,62 % et un rappel de 73,84 % soit des résultats inférieurs en termes d'exactitude, de perte de Brier, de score F1 et de rappel. Cela peut être dû au fait que les arbres de décision simples ont tendance à surajuster les données et à ne pas généraliser correctement pour les données de test.
+
+Le modèle Extremely Fast Decision Tree a obtenu le score le plus bas sur toutes les mesures d'évaluation avec une exactitude de 66,70 %, une perte de Brier de 33,90, un score F1 de 48,80 % et un rappel de 39,27 %. Il semble que la précision du modèle soit compromise en raison de l'utilisation de critères de division moins précis.
+
+La colonne votes (majority) montre les métriques obtenus avec les résultats de la majorité des modèles (donc au moins 2 sur 3). La valeur prédite est donc 1 si au moins 2 des 3 modèles ont prédit 1 et 0 sinon. Les résultats devraient donc être meilleurs que ceux obtenus par les modèles individuels. Cependant, on constate que les résultats sont inférieurs à ceux obtenus par le modèle Random Forest seul et environ égaux à ceux obtenus par le modèle Decision Tree seul. Cela montre un réel écart de performance entre Random Forest et les autres modèles qui fait que pour certains cas, les résultats prédits par EFDT et DT vont être faux alors que ceux prédits par Random Forest sera vrai.
+
+En termes de matrice de confusion, le modèle Random Forest a le plus grand nombre de vrais positifs, de vrais négatifs et de faux négatifs, ce qui signifie qu'il est capable de prédire correctement les deux classes (positives et négatives) et qu'il a un taux de faux négatifs plus faible.
+
+En conclusion, sur la base de toutes les mesures d'évaluation, le modèle Random Forest est le meilleur modèle pour ce jeu de données.
